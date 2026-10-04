@@ -1,0 +1,156 @@
+/* ============================
+   HERO SECTION
+============================ */
+.hero {
+  background-image: url("../img/Hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 0 20px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 30px;
+}
+
+.hero .cta {
+  padding: 12px 28px;
+  border: 1px solid var(--gold);
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ============================
+   STATS BAR
+============================ */
+.stats {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 40px;
+  background-color: var(--charcoal);
+  border-bottom: 1px solid var(--border);
+}
+
+.stats div {
+  text-align: center;
+}
+
+.stats h3 {
+  color: var(--gold);
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.stats p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* ============================
+   DISCIPLINES SECTION
+============================ */
+.disciplines {
+  padding: 80px 40px;
+}
+
+.disciplines h2 {
+  margin-bottom: 20px;
+}
+
+.disciplines-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.disciplines-grid article {
+  background-color: var(--charcoal);
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+.disciplines-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.disciplines-grid h3 {
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.disciplines-grid p {
+  color: var(--muted);
+}
+
+/* ============================
+   FEATURED PROJECTS
+============================ */
+.featured {
+  padding: 80px 40px;
+}
+
+.featured h2 {
+  margin-bottom: 20px;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.featured-grid article {
+  background-color: var(--charcoal);
+  padding: 20px;
+  border: 1px solid var(--border);
+}
+
+.featured-grid img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.featured-grid h3 {
+  color: var(--white);
+  margin-bottom: 5px;
+}
+
+.featured-grid p {
+  color: var(--muted);
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 768px) {
+  .disciplines-grid,
+  .featured-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

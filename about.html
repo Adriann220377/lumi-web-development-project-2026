@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>About — Lumi Architecture Studio</title>
+
+  <!-- Global styles -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- About page styles -->
+  <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
@@ -19,34 +24,178 @@
   </nav>
 </header>
 
-<main>
-  <h1>About the Studio</h1>
+<main class="about-page">
 
-  <section>
-    <h2>Founded 2009</h2>
-    <p>A studio built on Nordic clarity.</p>
+  <!-- PHILOSOPHY SECTION -->
+  <section class="philosophy">
+    <div class="text">
+      <h3>FOUNDED 2009</h3>
+      <h1>A studio built on Nordic clarity.</h1>
+
+      <p>
+        Lumi Architecture Studio was founded in Helsinki in 2009 with a single conviction:
+        that great architecture is not made through complexity, but through ruthless clarity of intent.
+        We design buildings and interiors that respond to the Nordic climate — its long winters,
+        fleeting summer light, and the particular quality of silence that comes with frozen ground.
+      </p>
+
+      <p>
+        Over seventeen years, we have completed more than 140 projects across Finland and Scandinavia,
+        ranging from private lakeside retreats to civic towers. Each one is the result of a sustained
+        conversation between programme, site, and material.
+      </p>
+
+      <p>
+        We work in Helsinki, Tampere, and Stockholm, with a core team of 28 architects, interior designers,
+        and project architects.
+      </p>
+    </div>
+
+    <div class="image">
+      <img src="img/About.png" alt="About Lumi Architecture Studio">
+    </div>
   </section>
 
-  <section>
+  <!-- PRINCIPLES SECTION -->
+  <section class="principles">
     <h2>Studio Principles</h2>
-    <h3>01 Material Honesty</h3>
-    <p>We use materials as they want to be used.</p>
 
-    <h3>02 Climate Response</h3>
-    <p>Nordic light is an architectural material.</p>
+    <div class="principles-grid">
 
-    <h3>03 Permanence Over Trend</h3>
-    <p>We design for decades.</p>
+      <article>
+        <h3>01 Material Honesty</h3>
+        <p>
+          We use materials as they want to be used. Concrete bears load. Wood breathes. Glass reveals.
+          We resist the impulse to disguise structure or simulate surfaces.
+        </p>
+      </article>
+
+      <article>
+        <h3>02 Climate Response</h3>
+        <p>
+          Nordic light is an architectural material. We study sun angles, shadow depths, and the quality
+          of diffused winter light as rigorously as any structural question.
+        </p>
+      </article>
+
+      <article>
+        <h3>03 Permanence Over Trend</h3>
+        <p>
+          We design for decades. A Lumi building should improve with weathering — its geometry becoming
+          more legible, its materials more textured, as the years accumulate.
+        </p>
+      </article>
+
+    </div>
   </section>
 
-  <section>
+  <!-- TEAM SECTION -->
+  <section class="team">
     <h2>Our Team</h2>
-    <p>28 Core Team Members · 6 Partners · 3 Locations</p>
+
+    <div class="team-grid">
+
+      <article>
+        <img src="img/Team1.png" alt="Team Member 1">
+        <h3>Aino Mäkinen</h3>
+        <p>Founding Partner — Est. 2009</p>
+      </article>
+
+      <article>
+        <img src="img/Team2.png" alt="Team Member 2">
+        <h3>Mikael Lindström</h3>
+        <p>Senior Partner — Since 2011</p>
+      </article>
+
+      <article>
+        <img src="img/Team3.png" alt="Team Member 3">
+        <h3>Jonas Bergström</h3>
+        <p>Design Director — Since 2015</p>
+      </article>
+
+      <article>
+        <img src="img/Team4.png" alt="Team Member 4">
+        <h3>Petra Koskinen</h3>
+        <p>Interior Lead — Since 2018</p>
+      </article>
+
+    </div>
   </section>
+
+  <!-- TEAM STATS -->
+  <section class="team-stats">
+    <div>
+      <h3>28</h3>
+      <p>Core Team Members</p>
+    </div>
+
+    <div>
+      <h3>6</h3>
+      <p>Partner Architects</p>
+    </div>
+
+    <div>
+      <h3>3</h3>
+      <p>Studio Locations</p>
+    </div>
+  </section>
+
 </main>
 
-<footer>
-  <p>© 2026 Lumi Architecture Studio</p>
+<footer class="footer">
+
+  <div class="footer-grid">
+
+    <!-- COLUMN 1 -->
+    <div class="footer-col">
+      <h3>LUMI Architecture Studio</h3>
+      <p>
+        Building spaces that define Nordic living — rigorous craft,
+        honest materials, enduring form.
+      </p>
+
+      <div class="footer-social">
+        <span>IN</span>
+        <span>IG</span>
+        <span>BE</span>
+      </div>
+    </div>
+
+    <!-- COLUMN 2 -->
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="report.html">Web Report</a>
+    </div>
+
+    <!-- COLUMN 3 -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="services.html">Residential Architecture</a>
+      <a href="services.html">Commercial Architecture</a>
+      <a href="services.html">Interior Design</a>
+      <a href="services.html">Sustainability Consulting</a>
+    </div>
+
+    <!-- COLUMN 4 -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Eteläesplanadi 14<br>00130 Helsinki, Finland</p>
+      <p>studio@lumiarch.fi</p>
+      <p>+358 9 123 4567</p>
+      <p class="footer-locations">Helsinki · Tampere · Stockholm</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Lumi Architecture Studio. All rights reserved.
+  </div>
+
 </footer>
 
 </body>

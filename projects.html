@@ -3,7 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <title>Projects — Lumi Architecture Studio</title>
+
+  <!-- Global styles -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Projects page styles -->
+  <link rel="stylesheet" href="css/projects.css">
 </head>
 
 <body>
@@ -19,37 +24,143 @@
   </nav>
 </header>
 
-<main>
+<main class="projects-page">
+
   <h1>Our Projects</h1>
 
-  <nav>
-    <a href="#">All Work</a>
-    <a href="#">Residential</a>
-    <a href="#">Commercial</a>
-    <a href="#">Interior</a>
-  </nav>
+  <!-- FILTER NAV -->
+  <div class="project-filters">
+    <button data-filter="all" class="active">All Work</button>
+    <button data-filter="residential">Residential</button>
+    <button data-filter="commercial">Commercial</button>
+    <button data-filter="interior">Interior</button>
+  </div>
 
-  <section>
-    <article>
-      <h2>Villa Arktis</h2>
-      <p>Espoo, Finland</p>
+  <!-- PROJECT GRID -->
+  <section class="project-grid">
+
+    <!-- VILLA ARKTIS -->
+    <article class="project-card" data-category="residential">
+      <img src="img/Arktis.png" alt="Villa Arktis">
+      <div class="overlay">
+        <h3>Villa Arktis</h3>
+        <p>Residential · 2024</p>
+        <p>Espoo, Finland</p>
+      </div>
     </article>
 
-    <article>
-      <h2>Nordhaus Tower</h2>
-      <p>Helsinki, Finland</p>
+    <!-- NORDHAUS TOWER -->
+    <article class="project-card" data-category="commercial">
+      <img src="img/Nordhaus.png" alt="Nordhaus Tower">
+      <div class="overlay">
+        <h3>Nordhaus Tower</h3>
+        <p>Commercial · 2023</p>
+        <p>Helsinki, Finland</p>
+      </div>
     </article>
 
-    <article>
-      <h2>Aino Loft</h2>
-      <p>Helsinki, Finland</p>
+    <!-- AINO LOFT -->
+    <article class="project-card" data-category="interior">
+      <img src="img/Aino.png" alt="Aino Loft">
+      <div class="overlay">
+        <h3>Aino Loft</h3>
+        <p>Interior · 2024</p>
+        <p>Helsinki, Finland</p>
+      </div>
     </article>
+
+    <!-- SILTA PENTHOUSE -->
+    <article class="project-card" data-category="interior">
+      <img src="img/Interior.png" alt="Silta Penthouse">
+      <div class="overlay">
+        <h3>Silta Penthouse</h3>
+        <p>Interior · 2024</p>
+        <p>Tampere, Finland</p>
+        <p>Monolithic interiors with hand‑trowelled plaster and blackened steel.</p>
+      </div>
+    </article>
+
+    <!-- TALO CULTURAL CENTRE -->
+    <article class="project-card" data-category="commercial">
+      <img src="img/Commercial.png" alt="Talo Cultural Centre">
+      <div class="overlay">
+        <h3>Talo Cultural Centre</h3>
+        <p>Commercial · 2022</p>
+        <p>Turku, Finland</p>
+      </div>
+    </article>
+
+    <!-- JÄRVI RETREAT -->
+    <article class="project-card" data-category="residential">
+      <img src="img/Residential.png" alt="Järvi Retreat">
+      <div class="overlay">
+        <h3>Järvi Retreat</h3>
+        <p>Residential · 2023</p>
+        <p>Lahti, Finland</p>
+      </div>
+    </article>
+
   </section>
+
 </main>
 
-<footer>
-  <p>© 2026 Lumi Architecture Studio</p>
+<footer class="footer">
+
+  <div class="footer-grid">
+
+    <!-- COLUMN 1 -->
+    <div class="footer-col">
+      <h3>LUMI Architecture Studio</h3>
+      <p>
+        Building spaces that define Nordic living — rigorous craft,
+        honest materials, enduring form.
+      </p>
+
+      <div class="footer-social">
+        <span>IN</span>
+        <span>IG</span>
+        <span>BE</span>
+      </div>
+    </div>
+
+    <!-- COLUMN 2 -->
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="report.html">Web Report</a>
+    </div>
+
+    <!-- COLUMN 3 -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="services.html">Residential Architecture</a>
+      <a href="services.html">Commercial Architecture</a>
+      <a href="services.html">Interior Design</a>
+      <a href="services.html">Sustainability Consulting</a>
+    </div>
+
+    <!-- COLUMN 4 -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Eteläesplanadi 14<br>00130 Helsinki, Finland</p>
+      <p>studio@lumiarch.fi</p>
+      <p>+358 9 123 4567</p>
+      <p class="footer-locations">Helsinki · Tampere · Stockholm</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Lumi Architecture Studio. All rights reserved.
+  </div>
+
 </footer>
+
+<script src="js/filter.js"></script>
 
 </body>
 </html>

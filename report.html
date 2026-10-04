@@ -3,7 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Web Report — Lumi Architecture Studio</title>
+
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/report.css">
 </head>
 
 <body>
@@ -19,53 +21,378 @@
   </nav>
 </header>
 
-<main>
-  <h1>Web Development Project Report</h1>
+<main class="report-page">
 
-  <section>
-    <h2>01 Planning</h2>
-    <p>Write your planning text here...</p>
+  <!-- TITLE -->
+  <section class="report-header">
+    <h1>Web Development Project Report</h1>
+    <p>Lumi Architecture Studio Website — Student Portfolio Project · Autumn 2026</p>
   </section>
 
-  <section>
-    <h2>02 Specification</h2>
-    <p>Write your specification summary here...</p>
+  <!-- TABS -->
+  <div class="report-tabs">
+    <button data-tab="report" class="active">Report</button>
+    <button data-tab="sitemap">Sitemap</button>
+    <button data-tab="style">Style Guide</button>
+    <button data-tab="wireframes">Wireframes</button>
+  </div>
+
+  <!-- TAB: REPORT -->
+  <section id="tab-report" class="tab-content active">
+
+    <article class="report-section">
+      <div class="number">01</div>
+      <div>
+        <h2>Planning</h2>
+        <p>
+          The project began with a client brief identifying Lumi Architecture Studio as the target brand.
+          Initial planning involved defining the site architecture — five core pages (Home, Projects, About,
+          Services, Contact) plus this Web Report — and establishing a content hierarchy for each.
+          A wireframe sketch was produced before any visual design decisions were made, ensuring layout logic
+          preceded aesthetic choices.
+        </p>
+        <p>
+          Colour palette selection was driven by the brand brief: a dark premium theme appropriate for a
+          high-end Nordic architecture practice. Gold accents were chosen to suggest precision and craft
+          without excessive warmth. Typography choices (Montserrat for headings, Inter for body) were validated
+          against readability requirements across all three target breakpoints.
+        </p>
+      </div>
+    </article>
+
+    <article class="report-section">
+      <div class="number">02</div>
+      <div>
+        <h2>Specification</h2>
+        <p>
+          The site is implemented as a multi-page static website using semantic HTML5, modular CSS, and a small
+          amount of vanilla JavaScript for interactivity (navigation behaviour, project filtering, and tabbed
+          report content). No frameworks are used, in order to align with course requirements and demonstrate
+          direct control over markup and styling.
+        </p>
+        <p>
+          Each page has its own CSS file (home.css, projects.css, about.css, services.css, contact.css, report.css)
+          plus a shared style.css for global typography, colours, and layout primitives. Assets are organised into
+          /img for images and /js for scripts, following a clear, predictable structure.
+        </p>
+      </div>
+    </article>
+
+    <article class="report-section">
+      <div class="number">03</div>
+      <div>
+        <h2>Layout Choices</h2>
+        <p>
+          The primary layout system is CSS Grid at the page level, with Flexbox used for component-internal
+          alignment. Grid is used for project cards, services, team members, and report sections, while Flexbox
+          handles navigation, stats bars, and form alignment.
+        </p>
+        <p>
+          The hero section uses 100vh height with a stacked content column to ensure vertical centring regardless
+          of viewport height. Section padding and max-width constraints are used to keep text columns readable
+          and consistent across pages.
+        </p>
+      </div>
+    </article>
+
+    <article class="report-section">
+      <div class="number">04</div>
+      <div>
+        <h2>Responsiveness</h2>
+        <p>
+          Three breakpoints are defined:
+        </p>
+        <ul>
+          <li>Mobile (~375px): Single-column layout throughout. Project grid becomes one column; stats bars stack.</li>
+          <li>Tablet (~768px): Two-column layouts activate for hero content + image pairs. Project grid becomes two columns.</li>
+          <li>Desktop (~1440px): Full three- and four-column grids. Navigation is a horizontal link row.</li>
+        </ul>
+        <p>
+          Responsiveness is implemented using CSS media queries and grid reflow. No framework utilities are used;
+          all breakpoints are written directly in CSS to keep the implementation transparent.
+        </p>
+      </div>
+    </article>
+
+    <article class="report-section">
+      <div class="number">05</div>
+      <div>
+        <h2>Media</h2>
+        <p>
+          All photography is sourced from Unsplash and stored locally in the /img directory. Images are resized
+          to appropriate dimensions for their usage (hero, project cards, team portraits) to avoid unnecessary
+          file size and layout shift.
+        </p>
+        <p>
+          Alt text is provided for all meaningful images to support screen reader accessibility. Decorative
+          elements (such as geometric frames) are implemented as styled divs without alt attributes.
+        </p>
+      </div>
+    </article>
+
+    <article class="report-section">
+      <div class="number">06</div>
+      <div>
+        <h2>Scripts & Interactivity</h2>
+        <p>
+          JavaScript is used sparingly to enhance the experience without overwhelming the project:
+        </p>
+        <ul>
+          <li>Project filter: category buttons show/hide project cards based on data-category attributes.</li>
+          <li>Report tabs: clicking a tab button swaps the visible content section.</li>
+        </ul>
+        <p>
+          All scripts are written in vanilla JavaScript and kept in the /js directory. No third-party libraries
+          are used.
+        </p>
+      </div>
+    </article>
+
+    <article class="report-section">
+      <div class="number">07</div>
+      <div>
+        <h2>Validation</h2>
+        <p>
+          HTML structure follows semantic conventions: landmark elements (nav, main, section, footer), a single
+          H1 per page, and H2/H3 used for section and sub-section titles. Forms use labels paired with inputs.
+        </p>
+        <p>
+          Colour contrast was checked against WCAG 2.1 AA requirements for the dark theme. Body text, white text,
+          and gold accents all meet or exceed AA contrast ratios against the charcoal background.
+        </p>
+      </div>
+    </article>
+
+    <article class="report-section">
+      <div class="number">08</div>
+      <div>
+        <h2>Reflection</h2>
+        <p>
+          The decision to build Lumi as a multi-page static site rather than a single-page app kept the project
+          aligned with course expectations and made the structure easier to understand. Navigation is simple and
+          predictable, and each page has a clear purpose.
+        </p>
+        <p>
+          If the project were extended, future enhancements could include scroll-triggered animations, a richer
+          project detail view with image galleries, and a more advanced map integration using a JavaScript
+          library such as Leaflet with OpenStreetMap tiles.
+        </p>
+      </div>
+    </article>
+
   </section>
 
-  <section>
-    <h2>03 Layout Choices</h2>
-    <p>Write your layout explanation here...</p>
+  <!-- TAB: SITEMAP -->
+  <section id="tab-sitemap" class="tab-content">
+
+    <h2>Sitemap Diagram</h2>
+    <p>Primary page hierarchy and linking relationships for the Lumi Architecture Studio website.</p>
+
+    <div class="sitemap-diagram">
+      <div class="node root">Home</div>
+
+      <div class="node-row">
+        <div class="node">Projects</div>
+        <div class="node">About</div>
+        <div class="node">Services</div>
+        <div class="node">Contact</div>
+        <div class="node">Web Report</div>
+      </div>
+
+      <div class="node-row">
+        <div class="node child">Residential (filter)</div>
+        <div class="node child">Commercial (filter)</div>
+        <div class="node child">Interior (filter)</div>
+      </div>
+    </div>
+
+    <div class="sitemap-legend">
+      <p><span class="legend root"></span> Root page (entry point)</p>
+      <p><span class="legend nav"></span> Navigation link / connection</p>
+      <p><span class="legend node"></span> Secondary page node</p>
+      <p><span class="legend filter"></span> Filter / sub-category view</p>
+    </div>
+
   </section>
 
-  <section>
-    <h2>04 Responsiveness</h2>
-    <p>Explain your breakpoints here...</p>
+  <!-- TAB: STYLE GUIDE -->
+  <section id="tab-style" class="tab-content">
+
+    <h2>Style Guide</h2>
+
+    <section class="style-block">
+      <h3>Colour Palette</h3>
+      <div class="swatches">
+        <div class="swatch">
+          <div class="colour black"></div>
+          <p>Black — #080808<br>Page background</p>
+        </div>
+        <div class="swatch">
+          <div class="colour charcoal"></div>
+          <p>Charcoal — #141414<br>Section surfaces</p>
+        </div>
+        <div class="swatch">
+          <div class="colour charcoal-light"></div>
+          <p>Charcoal Light — #242424<br>Hover surfaces</p>
+        </div>
+        <div class="swatch">
+          <div class="colour gold"></div>
+          <p>Gold — #C9A86A<br>Accent / brand</p>
+        </div>
+        <div class="swatch">
+          <div class="colour soft-white"></div>
+          <p>Soft White — #F2F2F2<br>Primary text</p>
+        </div>
+        <div class="swatch">
+          <div class="colour muted"></div>
+          <p>Muted — #888888<br>Body / captions</p>
+        </div>
+        <div class="swatch">
+          <div class="colour border"></div>
+          <p>Border — #2E2E2E<br>Dividers / lines</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="style-block">
+      <h3>Typography</h3>
+
+      <div class="type-row">
+        <div class="type-sample h1">Lumi Architecture Studio</div>
+        <p>H1 · 64px / 300 · Montserrat</p>
+      </div>
+
+      <div class="type-row">
+        <div class="type-sample h2">Our Projects</div>
+        <p>H2 · 40px / 300 · Montserrat</p>
+      </div>
+
+      <div class="type-row">
+        <div class="type-sample h3">Material Honesty</div>
+        <p>H3 · 18px / 500 · Montserrat</p>
+      </div>
+
+      <div class="type-row">
+        <div class="type-sample label">OUR DISCIPLINES</div>
+        <p>Label · 10px / 600 · tracked · Montserrat</p>
+      </div>
+
+      <div class="type-row">
+        <div class="type-sample body">
+          We design buildings and interiors that respond to the Nordic climate — its long winters and fleeting summer light.
+        </div>
+        <p>Body · 14px / 400 · 1.8 line-height · Inter</p>
+      </div>
+
+      <div class="type-row">
+        <div class="type-sample small">Espoo, Finland — 2024</div>
+        <p>Small · 11px / 400 · Inter</p>
+      </div>
+    </section>
+
+    <section class="style-block">
+      <h3>Buttons & Form Fields</h3>
+
+      <div class="buttons-row">
+        <button class="btn-outline">PRIMARY OUTLINE</button>
+        <button class="btn-filled">PRIMARY FILLED (HOVER)</button>
+        <button class="btn-filter">FILTER ACTIVE</button>
+        <a class="btn-link" href="#">TEXT LINK →</a>
+      </div>
+
+      <div class="form-row">
+        <div class="field">
+          <label>FIELD LABEL — DEFAULT</label>
+          <input type="text" placeholder="Placeholder text...">
+        </div>
+        <div class="field">
+          <label>FIELD LABEL — FOCUS</label>
+          <input type="text" value="Aino Virtanen">
+        </div>
+        <div class="field error">
+          <label>FIELD LABEL — ERROR</label>
+          <input type="text" value="">
+          <span class="error-text">This field is required</span>
+        </div>
+      </div>
+    </section>
+
   </section>
 
-  <section>
-    <h2>05 Media</h2>
-    <p>Explain your images, video, audio, SVG here...</p>
+  <!-- TAB: WIREFRAMES -->
+  <section id="tab-wireframes" class="tab-content">
+
+    <h2>Page Wireframes</h2>
+    <p>Low-fidelity wireframes showing the layout logic for each page at 1440px desktop width.</p>
+
+    <div class="wireframe">
+      <div class="block hero"></div>
+      <div class="block stats"></div>
+      <div class="block grid"></div>
+      <div class="block footer"></div>
+    </div>
+
   </section>
 
-  <section>
-    <h2>06 Scripts & Interactivity</h2>
-    <p>Explain your gallery iframe, animations, etc...</p>
-  </section>
-
-  <section>
-    <h2>07 Validation</h2>
-    <p>Explain your HTML + CSS validation results...</p>
-  </section>
-
-  <section>
-    <h2>08 Reflection</h2>
-    <p>Write your reflection here...</p>
-  </section>
 </main>
 
-<footer>
-  <p>© 2026 Lumi Architecture Studio</p>
+<footer class="footer">
+
+  <div class="footer-grid">
+
+    <!-- COLUMN 1 -->
+    <div class="footer-col">
+      <h3>LUMI Architecture Studio</h3>
+      <p>
+        Building spaces that define Nordic living — rigorous craft,
+        honest materials, enduring form.
+      </p>
+
+      <div class="footer-social">
+        <span>IN</span>
+        <span>IG</span>
+        <span>BE</span>
+      </div>
+    </div>
+
+    <!-- COLUMN 2 -->
+    <div class="footer-col">
+      <h4>Navigation</h4>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+      <a href="report.html">Web Report</a>
+    </div>
+
+    <!-- COLUMN 3 -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="services.html">Residential Architecture</a>
+      <a href="services.html">Commercial Architecture</a>
+      <a href="services.html">Interior Design</a>
+      <a href="services.html">Sustainability Consulting</a>
+    </div>
+
+    <!-- COLUMN 4 -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <p>Eteläesplanadi 14<br>00130 Helsinki, Finland</p>
+      <p>studio@lumiarch.fi</p>
+      <p>+358 9 123 4567</p>
+      <p class="footer-locations">Helsinki · Tampere · Stockholm</p>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    © 2026 Lumi Architecture Studio. All rights reserved.
+  </div>
+
 </footer>
+
+<script src="js/report.js"></script>
 
 </body>
 </html>

@@ -1,0 +1,80 @@
+/* PAGE TITLE */
+.projects-page h1 {
+  text-align: center;
+  margin-top: 120px;
+  margin-bottom: 40px;
+}
+
+/* FILTER BUTTONS */
+.project-filters {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.project-filters button {
+  background: none;
+  border: none;
+  color: var(--white);
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.project-filters button.active {
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
+}
+
+/* PROJECT GRID */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  padding: 0 40px 80px;
+}
+
+/* PROJECT CARD */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.project-card img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* HOVER EFFECT */
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+.project-card .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.75);
+  color: var(--white);
+  opacity: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: opacity 0.3s ease;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+}
