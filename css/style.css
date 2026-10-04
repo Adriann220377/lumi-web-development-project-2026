@@ -101,6 +101,35 @@ a:hover {
   background: var(--white);
   width: 100%;
   border-radius: 2px;
+  transition: all 0.3s ease; /* animation */
+}
+
+/* ANIMATION: hamburger → X */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* CLOSE BUTTON (X inside menu) */
+.close-menu {
+  font-size: 32px;
+  color: var(--white);
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  line-height: 1;
+}
+
+.close-menu:hover {
+  color: var(--gold);
 }
 
 /* MOBILE MENU */
@@ -145,6 +174,31 @@ section {
   font-size: 12px;
   letter-spacing: 2px;
   text-transform: uppercase;
+}
+
+/* ULTRA-THIN GOLD SCROLLBAR */
+::-webkit-scrollbar {
+  width: 4px; /* very thin */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--muted);
+  border-radius: 10px;
+  transition: all 0.25s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--gold);
+  width: 8px; /* expands on hover */
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: var(--gold);
+  width: 10px; /* pops when used */
 }
 
 /* ============================
@@ -212,6 +266,27 @@ section {
 /* ============================
    RESPONSIVE
 ============================ */
+/* Hide nav-center on mobile */
+@media (max-width: 900px) {
+  .nav-center {
+    display: none;
+  }
+}
+
+/* Show hamburger only on mobile */
+@media (max-width: 900px) {
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* On desktop, hide mobile menu */
+@media (min-width: 901px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+
 @media (max-width: 900px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;

@@ -9,20 +9,20 @@
   background-position: center;
   display: flex;
   align-items: center;
-  padding-left: 80px;
-  text-align: left;
   margin-top: 0;
+  padding-left: 80px; /* keep hero text left aligned */
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(18, 18, 18, 0.65);
+  background: rgba(18, 18, 18, 0.85);
 }
 
 .hero-content {
   position: relative;
   max-width: 600px;
+  text-align: left; /* keep text left aligned */
 }
 
 .hero-label {
@@ -40,6 +40,13 @@
   line-height: 1.05;
 }
 
+.hero-line {
+  width: 120px;
+  height: 2px;
+  background: var(--gold);
+  margin: 20px 0;
+}
+
 .hero-title span {
   display: block;
 }
@@ -47,17 +54,35 @@
 .hero p {
   font-size: 22px;
   color: var(--muted);
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
+/* HERO FADE-IN */
+.hero-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFade 1.2s ease-out forwards;
+}
+
+@keyframes heroFade {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* PERFECT FIGMA CTA BUTTON */
 .cta {
-  display: inline-block;
-  padding: 16px 42px;
+  display: block;
+  margin: 0 auto; /* center CTA only */
+  padding: 14px 40px;
+  width: 600px; /* long rectangle */
   border: 2px solid var(--gold);
   color: var(--gold);
   font-size: 16px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .cta:hover {
@@ -65,10 +90,11 @@
   color: var(--black);
 }
 
+/* SCROLL */
 .scroll-indicator {
   position: absolute;
   bottom: 40px;
-  left: 80px;
+  left: 80px; /* same as hero padding */
   color: var(--muted);
   letter-spacing: 2px;
   font-size: 12px;
@@ -81,7 +107,7 @@
   display: flex;
   justify-content: space-around;
   padding: 60px 40px;
-  background-color: var(--charcoal);
+  background-color: rgba(18, 18, 18, 0.85);
   border-bottom: 1px solid var(--border);
 }
 
@@ -155,6 +181,7 @@
 .disc-card:hover .disc-overlay {
   opacity: 1;
 }
+
 /* ============================
    STUDIO PHILOSOPHY
 ============================ */
@@ -300,12 +327,12 @@
 }
 
 @media (max-width: 768px) {
-  .hero {
-    padding-left: 40px;
+  .hero-title {
+    font-size: 50px;
   }
 
-  .hero h1 {
-    font-size: 40px;
+  .cta {
+    width: 240px;
   }
 
   .disciplines-grid,
@@ -321,8 +348,8 @@
 }
 
 @media (max-width: 480px) {
-  .hero h1 {
-    font-size: 32px;
+  .hero-title {
+    font-size: 38px;
   }
 
   .hero p {
