@@ -2,38 +2,76 @@
    HERO SECTION
 ============================ */
 .hero {
+  position: relative;
+  height: 100vh;
   background-image: url("../img/Hero.png");
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-
-  padding: 0 20px;
+  padding-left: 80px;
+  text-align: left;
+  margin-top: 0;
 }
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(18, 18, 18, 0.65);
+}
+
+.hero-content {
+  position: relative;
+  max-width: 600px;
+}
+
+.hero-label {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.hero-title {
+  display: flex;
+  flex-direction: column;
+  font-size: 80px;
+  font-weight: 300;
+  line-height: 1.05;
+}
+
+.hero-title span {
+  display: block;
 }
 
 .hero p {
-  font-size: 18px;
+  font-size: 22px;
   color: var(--muted);
   margin-bottom: 30px;
 }
 
-.hero .cta {
-  padding: 12px 28px;
-  border: 1px solid var(--gold);
+.cta {
+  display: inline-block;
+  padding: 16px 42px;
+  border: 2px solid var(--gold);
   color: var(--gold);
+  font-size: 16px;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  letter-spacing: 1px;
+}
+
+.cta:hover {
+  background-color: var(--gold);
+  color: var(--black);
+}
+
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 80px;
+  color: var(--muted);
+  letter-spacing: 2px;
+  font-size: 12px;
 }
 
 /* ============================
@@ -53,13 +91,14 @@
 
 .stats h3 {
   color: var(--gold);
-  font-size: 20px;
+  font-size: 16px;
+  letter-spacing: 1px;
   margin-bottom: 5px;
 }
 
 .stats p {
   color: var(--muted);
-  font-size: 14px;
+  font-size: 13px;
 }
 
 /* ============================
@@ -70,7 +109,8 @@
 }
 
 .disciplines h2 {
-  margin-bottom: 20px;
+  font-size: 40px;
+  margin: 10px 0 40px;
 }
 
 .disciplines-grid {
@@ -79,26 +119,107 @@
   gap: 30px;
 }
 
-.disciplines-grid article {
-  background-color: var(--charcoal);
-  padding: 20px;
-  border: 1px solid var(--border);
+.disc-card {
+  position: relative;
+  overflow: hidden;
 }
 
-.disciplines-grid img {
+.disc-card img {
   width: 100%;
-  height: 220px;
+  height: 260px;
   object-fit: cover;
-  margin-bottom: 15px;
 }
 
-.disciplines-grid h3 {
+.disc-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.6);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.disc-overlay h3 {
   color: var(--white);
   margin-bottom: 5px;
 }
 
-.disciplines-grid p {
+.disc-overlay p {
   color: var(--muted);
+  font-size: 14px;
+}
+
+.disc-card:hover .disc-overlay {
+  opacity: 1;
+}
+/* ============================
+   STUDIO PHILOSOPHY
+============================ */
+.philosophy {
+  padding: 80px 40px;
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.philosophy h2 {
+  font-size: 36px;
+  font-weight: 300;
+  margin: 10px 0 20px;
+}
+
+.philosophy p {
+  color: var(--muted);
+  margin-bottom: 20px;
+}
+
+.text-link {
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.text-link:hover {
+  color: var(--white);
+}
+
+.philosophy-image {
+  position: relative;
+}
+
+.philosophy-image img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+/* Gold corner boxes */
+.philosophy-image::before,
+.philosophy-image::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--gold);
+}
+
+.philosophy-image::before {
+  top: -12px;
+  left: -12px;
+  border-right: none;
+  border-bottom: none;
+}
+
+.philosophy-image::after {
+  bottom: -12px;
+  right: -12px;
+  border-left: none;
+  border-top: none;
 }
 
 /* ============================
@@ -108,8 +229,16 @@
   padding: 80px 40px;
 }
 
-.featured h2 {
-  margin-bottom: 20px;
+.featured-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+}
+
+.featured-header h2 {
+  font-size: 32px;
+  margin-top: 8px;
 }
 
 .featured-grid {
@@ -118,32 +247,67 @@
   gap: 30px;
 }
 
-.featured-grid article {
-  background-color: var(--charcoal);
-  padding: 20px;
-  border: 1px solid var(--border);
+.project-card {
+  position: relative;
+  overflow: hidden;
 }
 
-.featured-grid img {
+.project-card img {
   width: 100%;
-  height: 240px;
+  height: 260px;
   object-fit: cover;
-  margin-bottom: 15px;
 }
 
-.featured-grid h3 {
-  color: var(--white);
+.project-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.6);
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  transition: opacity 0.3s ease;
+}
+
+.project-meta {
+  color: var(--muted);
+  font-size: 12px;
   margin-bottom: 5px;
 }
 
-.featured-grid p {
-  color: var(--muted);
+.project-overlay h3 {
+  color: var(--white);
+  font-size: 18px;
+}
+
+.project-card:hover .project-overlay {
+  opacity: 1;
 }
 
 /* ============================
    RESPONSIVE
 ============================ */
+@media (max-width: 900px) {
+  .disciplines-grid,
+  .featured-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .philosophy {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
+  .hero {
+    padding-left: 40px;
+  }
+
+  .hero h1 {
+    font-size: 40px;
+  }
+
   .disciplines-grid,
   .featured-grid {
     grid-template-columns: 1fr;
@@ -152,5 +316,16 @@
   .stats {
     flex-direction: column;
     gap: 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
   }
 }

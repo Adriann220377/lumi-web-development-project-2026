@@ -28,7 +28,7 @@ body {
   color: var(--white);
   font-family: 'Inter', sans-serif;
   line-height: 1.7;
-  padding-top: 80px; /* space for fixed header */
+  padding-top: 0;
 }
 
 h1, h2, h3 {
@@ -46,58 +46,90 @@ a:hover {
 }
 
 /* ============================
-   HEADER + NAVIGATION
+   NAVBAR
 ============================ */
-header {
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: rgba(10, 10, 10, 0.8);
-  border-bottom: 1px solid var(--border);
-  padding: 20px 40px;
-  z-index: 1000;
-}
-
-nav {
+  height: 70px;
+  padding: 0 40px;
+  background-color: transparent;
   display: flex;
-  gap: 30px;
-  justify-content: center;
-  font-size: 14px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+}
+
+.navbar.solid {
+  background-color: var(--black);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-left .logo img {
+  height: 32px;
+  width: auto;
+}
+
+.nav-center {
+  display: flex;
+  gap: 32px;
+  font-size: 13px;
   letter-spacing: 1px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ============================
-   HERO SECTION
-============================ */
-.hero {
-  text-align: center;
-  padding: 120px 20px;
+.nav-right {
+  display: flex;
+  align-items: center;
 }
 
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+.hamburger {
+  width: 28px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
 }
 
-.hero p {
-  font-size: 18px;
-  color: var(--muted);
-  margin-bottom: 30px;
+.hamburger span {
+  height: 3px;
+  background: var(--white);
+  width: 100%;
+  border-radius: 2px;
 }
 
-.cta {
-  display: inline-block;
-  padding: 12px 28px;
-  border: 1px solid var(--gold);
+/* MOBILE MENU */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 280px;
+  height: 100vh;
+  background: var(--black);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: right 0.3s ease;
+  z-index: 2000;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu a {
+  font-size: 20px;
+  color: var(--white);
+}
+
+.mobile-menu a:hover {
   color: var(--gold);
-  font-size: 14px;
-  letter-spacing: 1px;
-}
-
-.cta:hover {
-  background-color: var(--gold);
-  color: var(--black);
 }
 
 /* ============================
@@ -108,42 +140,15 @@ section {
   border-bottom: 1px solid var(--border);
 }
 
+.section-label {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
 /* ============================
    FOOTER
-=============================*/
-footer {
-  text-align: center;
-  padding: 40px;
-  color: var(--muted);
-  font-size: 14px;
-}
-
-/* ============================
-   RESPONSIVE BREAKPOINTS
-============================ */
-@media (max-width: 768px) {
-  nav {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    padding: 80px 20px;
-  }
-
-  .hero h1 {
-    font-size: 28px;
-  }
-}
-
-/* ============================
-   GLOBAL FOOTER
 ============================ */
 .footer {
   background-color: var(--charcoal);
@@ -190,21 +195,45 @@ footer {
   color: var(--white);
 }
 
-.footer-locations {
-  color: var(--gold);
-  margin-top: 10px;
-}
-
 .footer-bottom {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: var(--muted);
   font-size: 13px;
   padding-top: 20px;
   border-top: 1px solid var(--border);
 }
 
-/* RESPONSIVE FOOTER */
+.footer-locations {
+  color: var(--gold);
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
+  .nav-center {
+    gap: 16px;
+    font-size: 12px;
+  }
+
+  section {
+    padding: 60px 20px;
+  }
+
   .footer-grid {
     grid-template-columns: 1fr;
   }
