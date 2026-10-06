@@ -13,8 +13,14 @@
 
 <body>
 
-<header>
-  <nav>
+<header class="navbar">
+  <div class="nav-left">
+    <a href="index.html" class="logo">
+      <img src="img/logo.svg" alt="Lumi Architecture Studio Logo">
+    </a>
+  </div>
+
+  <nav class="nav-center">
     <a href="index.html">HOME</a>
     <a href="projects.html">PROJECTS</a>
     <a href="about.html">ABOUT</a>
@@ -22,18 +28,42 @@
     <a href="contact.html">CONTACT</a>
     <a href="report.html">WEB REPORT</a>
   </nav>
+
+  <div class="nav-right">
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
 </header>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="close-menu" id="closeMenu">×</div>
+
+  <a href="index.html">HOME</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="about.html">ABOUT</a>
+  <a href="services.html">SERVICES</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="report.html">WEB REPORT</a>
+</div>
 
 <main class="projects-page">
 
-  <h1>Our Projects</h1>
+  <div class="projects-header">
+    <span class="section-label">Portfolio</span>
+    <h1>Our Projects</h1>
+    <div class="project-line"></div>
+  </div>
 
   <!-- FILTER NAV -->
-  <div class="project-filters">
-    <button data-filter="all" class="active">All Work</button>
-    <button data-filter="residential">Residential</button>
-    <button data-filter="commercial">Commercial</button>
-    <button data-filter="interior">Interior</button>
+  <div class="filter-bar">
+    <div class="project-filters">
+      <button data-filter="all" class="active">All Work</button>
+      <button data-filter="residential">Residential</button>
+      <button data-filter="commercial">Commercial</button>
+      <button data-filter="interior">Interior</button>
+    </div>
   </div>
 
   <!-- PROJECT GRID -->
@@ -43,9 +73,8 @@
     <article class="project-card" data-category="residential">
       <img src="img/Arktis.png" alt="Villa Arktis">
       <div class="overlay">
+        <p>Residential · Espoo, Finland</p>
         <h3>Villa Arktis</h3>
-        <p>Residential · 2024</p>
-        <p>Espoo, Finland</p>
       </div>
     </article>
 
@@ -53,9 +82,8 @@
     <article class="project-card" data-category="commercial">
       <img src="img/Nordhaus.png" alt="Nordhaus Tower">
       <div class="overlay">
+        <p>Commercial · Helsinki, Finland</p>
         <h3>Nordhaus Tower</h3>
-        <p>Commercial · 2023</p>
-        <p>Helsinki, Finland</p>
       </div>
     </article>
 
@@ -63,9 +91,8 @@
     <article class="project-card" data-category="interior">
       <img src="img/Aino.png" alt="Aino Loft">
       <div class="overlay">
+        <p>Interior · Helsinki, Finland</p>
         <h3>Aino Loft</h3>
-        <p>Interior · 2024</p>
-        <p>Helsinki, Finland</p>
       </div>
     </article>
 
@@ -73,10 +100,8 @@
     <article class="project-card" data-category="interior">
       <img src="img/Interior.png" alt="Silta Penthouse">
       <div class="overlay">
+        <p>Interior · Tampere, Finland</p>
         <h3>Silta Penthouse</h3>
-        <p>Interior · 2024</p>
-        <p>Tampere, Finland</p>
-        <p>Monolithic interiors with hand‑trowelled plaster and blackened steel.</p>
       </div>
     </article>
 
@@ -84,9 +109,8 @@
     <article class="project-card" data-category="commercial">
       <img src="img/Commercial.png" alt="Talo Cultural Centre">
       <div class="overlay">
+        <p>Commercial · Turku, Finland</p>
         <h3>Talo Cultural Centre</h3>
-        <p>Commercial · 2022</p>
-        <p>Turku, Finland</p>
       </div>
     </article>
 
@@ -94,9 +118,35 @@
     <article class="project-card" data-category="residential">
       <img src="img/Residential.png" alt="Järvi Retreat">
       <div class="overlay">
+        <p>Residential · Lahti, Finland</p>
         <h3>Järvi Retreat</h3>
-        <p>Residential · 2023</p>
-        <p>Lahti, Finland</p>
+      </div>
+    </article>
+
+    <!-- STUDIO HARMONIA -->
+    <article class="project-card" data-category="interior">
+      <img src="img/Harmonia.png" alt="Studio Harmonia">
+      <div class="overlay">
+        <p>Interior · Oulu, Finland</p>
+        <h3>Studio Harmonia</h3>
+      </div>
+    </article>
+
+    <!-- KAIVO RESIDENCE -->
+    <article class="project-card" data-category="residential">
+      <img src="img/Kaivo.png" alt="Kaivo Residence">
+      <div class="overlay">
+        <p>Residential · Porvoo, Finland</p>
+        <h3>Kaivo Residence</h3>
+      </div>
+    </article>
+
+    <!-- FORUM COMMERCE PARK -->
+    <article class="project-card" data-category="commercial">
+      <img src="img/Forum.png" alt="Forum Commerce Park">
+      <div class="overlay">
+        <p>Commercial · Vantaa, Finland</p>
+        <h3>Forum Commerce Park</h3>
       </div>
     </article>
 
@@ -105,10 +155,8 @@
 </main>
 
 <footer class="footer">
-
   <div class="footer-grid">
 
-    <!-- COLUMN 1 -->
     <div class="footer-col">
       <h3>LUMI Architecture Studio</h3>
       <p>
@@ -123,7 +171,6 @@
       </div>
     </div>
 
-    <!-- COLUMN 2 -->
     <div class="footer-col">
       <h4>Navigation</h4>
       <a href="index.html">Home</a>
@@ -134,7 +181,6 @@
       <a href="report.html">Web Report</a>
     </div>
 
-    <!-- COLUMN 3 -->
     <div class="footer-col">
       <h4>Services</h4>
       <a href="services.html">Residential Architecture</a>
@@ -143,7 +189,6 @@
       <a href="services.html">Sustainability Consulting</a>
     </div>
 
-    <!-- COLUMN 4 -->
     <div class="footer-col">
       <h4>Contact</h4>
       <p>Eteläesplanadi 14<br>00130 Helsinki, Finland</p>
@@ -155,12 +200,12 @@
   </div>
 
   <div class="footer-bottom">
-    © 2026 Lumi Architecture Studio. All rights reserved.
+    <span>© 2026 Lumi Architecture Studio. All rights reserved.</span>
+    <span class="footer-locations">Helsinki · Tampere · Stockholm</span>
   </div>
-
 </footer>
 
 <script src="js/filter.js"></script>
-
+<script src="js/nav.js"></script>
 </body>
 </html>
