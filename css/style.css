@@ -280,13 +280,6 @@ section {
   }
 }
 
-/* On desktop, hide mobile menu */
-@media (min-width: 901px) {
-  .mobile-menu {
-    display: none;
-  }
-}
-
 @media (max-width: 900px) {
   .footer-grid {
     grid-template-columns: 1fr 1fr;
