@@ -1,113 +1,311 @@
-/* PHILOSOPHY SECTION */
+.about-page {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 80px 40px;
+}
+
+/* TOP SECTION */
 .philosophy {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
-  padding: 120px 40px 80px;
+  padding-bottom: 60px;
+  padding-left: 9px;
 }
 
-.philosophy h3 {
+.section-label {
   color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-align: left;
   margin-bottom: 10px;
 }
 
 .philosophy h1 {
-  margin-bottom: 20px;
+  font-size: 62px;
+  font-weight: 300;
+  margin: 0 0 20px 0;
+  text-align: left;
+}
+
+.about-line {
+  width: 160px;
+  height: 3px;
+  background: var(--gold);
+  margin: 20px 0 18px 0;
 }
 
 .philosophy p {
-  margin-bottom: 20px;
   color: var(--muted);
+  margin-bottom: 18px;
+  max-width: 620px;
 }
 
-.philosophy img {
+/* IMAGE WITH GOLD CORNERS */
+.image-wrapper {
+  position: relative;
+  max-width: 560px;
+  margin-left: auto;
+}
+
+.image-wrapper img {
   width: 100%;
   height: auto;
-  border: 1px solid var(--border);
+  display: block;
+  border: none;
 }
 
-/* PRINCIPLES */
+.image-corners::before,
+.image-corners::after {
+  content: "";
+  position: absolute;
+  width: 32px;
+  height: 26px;
+  border: 2px solid var(--gold);
+}
+
+.image-corners::before {
+  top: -14px;
+  left: -14px;
+}
+
+.image-corners::after {
+  bottom: -14px;
+  right: -14px;
+}
+
+/* DIVIDER — LONG LINES + HOLLOW DIAMOND */
+.divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 70px 0;
+}
+
+.divider .line {
+  width: 280px;
+  height: 2px;
+  background: var(--border);
+}
+
+.divider .diamond {
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--gold);
+  background: transparent;
+  transform: rotate(45deg);
+  margin: 0 30px;
+}
+
+.divider.dark .line {
+  background: var(--white);
+}
+
+/* PRINCIPLES — BLACK BACKGROUND */
 .principles {
-  padding: 80px 40px;
+  background: var(--black);
+  padding: 80px 40px 90px;
+}
+
+.principles .section-label {
+  margin-bottom: 10px;
 }
 
 .principles h2 {
-  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 300;
+  margin: 0 0 50px;
 }
 
 .principles-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 60px;
 }
 
 .principles-grid article {
-  background-color: var(--charcoal);
-  padding: 20px;
-  border: 1px solid var(--border);
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.principle-number {
+  color: var(--gold);
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.principle-number::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 2px;
+  background: var(--gold);
+  margin-top: 6px;
 }
 
 .principles-grid h3 {
-  color: var(--gold);
-  margin-bottom: 10px;
+  margin: 10px 0 12px;
+  font-size: 18px;
 }
 
 .principles-grid p {
   color: var(--muted);
+  line-height: 1.6;
 }
 
-/* TEAM */
+/* TEAM SECTION WITH LEFT GOLD LINE */
 .team {
-  padding: 80px 40px;
+  position: relative;
+  background: var(--black);
+  padding: 80px 40px 40px;
+}
+
+.team::before {
+  content: "";
+  position: absolute;
+  left: 40px;
+  top: 80px;
+  width: 2px;
+  height: 40px;
+  background: var(--gold);
+}
+
+.team .section-label {
+  margin-left: 20px;
+  margin-bottom: 10px;
 }
 
 .team h2 {
-  margin-bottom: 30px;
+  font-size: 40px;
+  font-weight: 300;
+  margin: 0 0 40px 20px;
 }
 
+/* TEAM GRID WITH OVERLAY CARDS */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 30px;
+  gap: 32px;
+}
+
+.team-grid article {
+  position: relative;
+  overflow: hidden;
 }
 
 .team-grid img {
   width: 100%;
   height: 280px;
   object-fit: cover;
-  border: 1px solid var(--border);
-  margin-bottom: 10px;
+  display: block;
+}
+
+/* DARK OVERLAY */
+.team-grid article::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0.15));
+}
+
+/* TEXT ON OVERLAY */
+.team-grid h3,
+.team-grid p {
+  position: absolute;
+  left: 18px;
+  color: var(--white);
+  z-index: 1;
 }
 
 .team-grid h3 {
-  margin-bottom: 5px;
+  bottom: 40px;
+  font-size: 16px;
+}
+
+/* GOLD UNDERLINE UNDER NAME */
+.team-grid h3::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
 }
 
 .team-grid p {
+  bottom: 18px;
+  font-size: 13px;
   color: var(--muted);
 }
 
-/* TEAM STATS */
+/* TEAM STATS WITH TOP GOLD LINE */
 .team-stats {
+  position: relative;
+  background: var(--black);
   display: flex;
-  justify-content: space-around;
-  padding: 60px 40px;
-  background-color: var(--charcoal);
+  justify-content: center;
+  gap: 120px;
+  padding: 60px 40px 90px;
   border-top: 1px solid var(--border);
+}
+
+.team-stats::before {
+  content: "";
+  position: absolute;
+  top: 60px;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background: var(--gold);
+}
+
+.team-stats div {
+  text-align: center;
 }
 
 .team-stats h3 {
   color: var(--gold);
-  font-size: 32px;
-  margin-bottom: 5px;
+  font-size: 40px;
+  margin-bottom: 6px;
 }
 
 .team-stats p {
   color: var(--muted);
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 /* RESPONSIVE */
+@media (max-width: 1024px) {
+  .philosophy {
+    grid-template-columns: 1fr;
+  }
+
+  .image-wrapper {
+    margin: 40px auto 0;
+  }
+
+  .team-grid {
+    grid-template-columns: 2fr 2fr;
+  }
+
+  .team-stats {
+    gap: 60px;
+  }
+}
+
 @media (max-width: 768px) {
+  .about-page {
+    padding: 60px 20px;
+  }
+
   .philosophy {
     grid-template-columns: 1fr;
   }
@@ -123,5 +321,9 @@
   .team-stats {
     flex-direction: column;
     gap: 20px;
+  }
+
+  .team::before {
+    left: 20px;
   }
 }

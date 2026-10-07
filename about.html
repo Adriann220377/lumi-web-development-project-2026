@@ -4,17 +4,20 @@
   <meta charset="UTF-8">
   <title>About — Lumi Architecture Studio</title>
 
-  <!-- Global styles -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- About page styles -->
   <link rel="stylesheet" href="css/about.css">
 </head>
 
 <body>
 
-<header>
-  <nav>
+<header class="navbar">
+  <div class="nav-left">
+    <a href="index.html" class="logo">
+      <img src="img/logo.svg" alt="Lumi Architecture Studio Logo">
+    </a>
+  </div>
+
+  <nav class="nav-center">
     <a href="index.html">HOME</a>
     <a href="projects.html">PROJECTS</a>
     <a href="about.html">ABOUT</a>
@@ -22,15 +25,33 @@
     <a href="contact.html">CONTACT</a>
     <a href="report.html">WEB REPORT</a>
   </nav>
+
+  <div class="nav-right">
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="close-menu" id="closeMenu">×</div>
+
+  <a href="index.html">HOME</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="about.html">ABOUT</a>
+  <a href="services.html">SERVICES</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="report.html">WEB REPORT</a>
+</div>
 
 <main class="about-page">
 
-  <!-- PHILOSOPHY SECTION -->
+  <!-- TOP SECTION -->
   <section class="philosophy">
     <div class="text">
-      <h3>FOUNDED 2009</h3>
+      <span class="section-label">FOUNDED 2009</span>
       <h1>A studio built on Nordic clarity.</h1>
+      <div class="about-line"></div>
 
       <p>
         Lumi Architecture Studio was founded in Helsinki in 2009 with a single conviction:
@@ -51,19 +72,29 @@
       </p>
     </div>
 
-    <div class="image">
+    <div class="image-wrapper">
+      <div class="image-corners"></div>
       <img src="img/About.png" alt="About Lumi Architecture Studio">
     </div>
   </section>
 
+  <!-- DIVIDER -->
+  <div class="divider">
+    <span class="line"></span>
+    <span class="diamond"></span>
+    <span class="line"></span>
+  </div>
+
   <!-- PRINCIPLES SECTION -->
   <section class="principles">
+    <span class="section-label">WHAT WE BELIEVE</span>
     <h2>Studio Principles</h2>
 
     <div class="principles-grid">
 
       <article>
-        <h3>01 Material Honesty</h3>
+        <span class="principle-number">01</span>
+        <h3>Material Honesty</h3>
         <p>
           We use materials as they want to be used. Concrete bears load. Wood breathes. Glass reveals.
           We resist the impulse to disguise structure or simulate surfaces.
@@ -71,7 +102,8 @@
       </article>
 
       <article>
-        <h3>02 Climate Response</h3>
+        <span class="principle-number">02</span>
+        <h3>Climate Response</h3>
         <p>
           Nordic light is an architectural material. We study sun angles, shadow depths, and the quality
           of diffused winter light as rigorously as any structural question.
@@ -79,7 +111,8 @@
       </article>
 
       <article>
-        <h3>03 Permanence Over Trend</h3>
+        <span class="principle-number">03</span>
+        <h3>Permanence Over Trend</h3>
         <p>
           We design for decades. A Lumi building should improve with weathering — its geometry becoming
           more legible, its materials more textured, as the years accumulate.
@@ -89,8 +122,16 @@
     </div>
   </section>
 
+  <!-- DIVIDER -->
+  <div class="divider dark">
+    <span class="line"></span>
+    <span class="diamond"></span>
+    <span class="line"></span>
+  </div>
+
   <!-- TEAM SECTION -->
   <section class="team">
+    <span class="section-label">THE PEOPLE</span>
     <h2>Our Team</h2>
 
     <div class="team-grid">
@@ -143,10 +184,8 @@
 </main>
 
 <footer class="footer">
-
   <div class="footer-grid">
 
-    <!-- COLUMN 1 -->
     <div class="footer-col">
       <h3>LUMI Architecture Studio</h3>
       <p>
@@ -161,7 +200,6 @@
       </div>
     </div>
 
-    <!-- COLUMN 2 -->
     <div class="footer-col">
       <h4>Navigation</h4>
       <a href="index.html">Home</a>
@@ -172,7 +210,6 @@
       <a href="report.html">Web Report</a>
     </div>
 
-    <!-- COLUMN 3 -->
     <div class="footer-col">
       <h4>Services</h4>
       <a href="services.html">Residential Architecture</a>
@@ -181,22 +218,20 @@
       <a href="services.html">Sustainability Consulting</a>
     </div>
 
-    <!-- COLUMN 4 -->
     <div class="footer-col">
       <h4>Contact</h4>
       <p>Eteläesplanadi 14<br>00130 Helsinki, Finland</p>
       <p>studio@lumiarch.fi</p>
       <p>+358 9 123 4567</p>
-      <p class="footer-locations">Helsinki · Tampere · Stockholm</p>
     </div>
 
   </div>
 
   <div class="footer-bottom">
-    © 2026 Lumi Architecture Studio. All rights reserved.
+    <span>© 2026 Lumi Architecture Studio. All rights reserved.</span>
+    <span class="footer-locations">Helsinki · Tampere · Stockholm</span>
   </div>
-
 </footer>
-
+<script src="js/nav.js"></script>
 </body>
 </html>

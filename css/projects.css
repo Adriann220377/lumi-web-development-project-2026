@@ -52,7 +52,7 @@
 }
 
 .project-filters button {
-  background: var(--charcoal-light);
+  background: rgba(18, 18, 18, 0.806);
   border: none;
   color: var(--white);
   font-size: 14px;
