@@ -4,17 +4,20 @@
   <meta charset="UTF-8">
   <title>Services — Lumi Architecture Studio</title>
 
-  <!-- Global styles -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- Services page styles -->
   <link rel="stylesheet" href="css/services.css">
 </head>
 
 <body>
 
-<header>
-  <nav>
+<header class="navbar">
+  <div class="nav-left">
+    <a href="index.html" class="logo">
+      <img src="img/logo.svg" alt="Lumi Architecture Studio Logo">
+    </a>
+  </div>
+
+  <nav class="nav-center">
     <a href="index.html">HOME</a>
     <a href="projects.html">PROJECTS</a>
     <a href="about.html">ABOUT</a>
@@ -22,21 +25,39 @@
     <a href="contact.html">CONTACT</a>
     <a href="report.html">WEB REPORT</a>
   </nav>
+
+  <div class="nav-right">
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="close-menu" id="closeMenu">×</div>
+
+  <a href="index.html">HOME</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="about.html">ABOUT</a>
+  <a href="services.html">SERVICES</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="report.html">WEB REPORT</a>
+</div>
 
 <main class="services-page">
 
-  <!-- SERVICES INTRO -->
+  <!-- INTRO -->
   <section class="services-intro">
     <h3>WHAT WE OFFER</h3>
     <h1>Services</h1>
   </section>
 
-  <!-- SERVICE CARDS -->
+  <!-- SERVICES GRID -->
   <section class="services-grid">
 
     <!-- RESIDENTIAL -->
     <article class="service-card">
+      <img src="img/icons/residential.svg" class="icon" alt="">
       <div class="content">
         <h3>Residential Architecture</h3>
         <p>
@@ -50,15 +71,11 @@
           <span>EXTENSION</span>
         </div>
       </div>
-
-      <div class="overlay">
-        <h3>Residential Architecture</h3>
-        <p>Private homes shaped by Nordic clarity.</p>
-      </div>
     </article>
 
     <!-- COMMERCIAL -->
     <article class="service-card">
+      <img src="img/icons/commercial.svg" class="icon" alt="">
       <div class="content">
         <h3>Commercial Architecture</h3>
         <p>
@@ -72,15 +89,11 @@
           <span>MIXED-USE</span>
         </div>
       </div>
-
-      <div class="overlay">
-        <h3>Commercial Architecture</h3>
-        <p>Modern commercial spaces with Nordic restraint.</p>
-      </div>
     </article>
 
     <!-- INTERIOR -->
     <article class="service-card">
+      <img src="img/icons/interior.svg" class="icon" alt="">
       <div class="content">
         <h3>Interior Design</h3>
         <p>
@@ -94,15 +107,11 @@
           <span>WORKSPACE</span>
         </div>
       </div>
-
-      <div class="overlay">
-        <h3>Interior Design</h3>
-        <p>Minimalist interiors crafted with material honesty.</p>
-      </div>
     </article>
 
     <!-- SUSTAINABILITY -->
     <article class="service-card">
+      <img src="img/icons/sustainability.svg" class="icon" alt="">
       <div class="content">
         <h3>Sustainability Consulting</h3>
         <p>
@@ -116,13 +125,7 @@
           <span>LCA</span>
         </div>
       </div>
-
-      <div class="overlay">
-        <h3>Sustainability Consulting</h3>
-        <p>Climate-responsive design from day one.</p>
-      </div>
     </article>
-
   </section>
 
   <!-- PROCESS SECTION -->
@@ -156,17 +159,13 @@
         <h3>05 REVIEW</h3>
         <p>Post-occupancy evaluation to learn what worked and what we would refine.</p>
       </article>
-
     </div>
   </section>
-
 </main>
 
 <footer class="footer">
-
   <div class="footer-grid">
 
-    <!-- COLUMN 1 -->
     <div class="footer-col">
       <h3>LUMI Architecture Studio</h3>
       <p>
@@ -181,7 +180,6 @@
       </div>
     </div>
 
-    <!-- COLUMN 2 -->
     <div class="footer-col">
       <h4>Navigation</h4>
       <a href="index.html">Home</a>
@@ -192,7 +190,6 @@
       <a href="report.html">Web Report</a>
     </div>
 
-    <!-- COLUMN 3 -->
     <div class="footer-col">
       <h4>Services</h4>
       <a href="services.html">Residential Architecture</a>
@@ -201,7 +198,6 @@
       <a href="services.html">Sustainability Consulting</a>
     </div>
 
-    <!-- COLUMN 4 -->
     <div class="footer-col">
       <h4>Contact</h4>
       <p>Eteläesplanadi 14<br>00130 Helsinki, Finland</p>
@@ -213,10 +209,11 @@
   </div>
 
   <div class="footer-bottom">
-    © 2026 Lumi Architecture Studio. All rights reserved.
+    <span>© 2026 Lumi Architecture Studio. All rights reserved.</span>
+    <span class="footer-locations">Helsinki · Tampere · Stockholm</span>
   </div>
-
 </footer>
 
+<script src="js/nav.js"></script>
 </body>
 </html>
