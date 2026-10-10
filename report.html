@@ -10,8 +10,14 @@
 
 <body>
 
-<header>
-  <nav>
+<header class="navbar">
+  <div class="nav-left">
+    <a href="index.html" class="logo">
+      <img src="img/logo.svg" alt="Lumi Architecture Studio Logo">
+    </a>
+  </div>
+
+  <nav class="nav-center">
     <a href="index.html">HOME</a>
     <a href="projects.html">PROJECTS</a>
     <a href="about.html">ABOUT</a>
@@ -19,15 +25,36 @@
     <a href="contact.html">CONTACT</a>
     <a href="report.html">WEB REPORT</a>
   </nav>
+
+  <div class="nav-right">
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
 </header>
 
-<main class="report-page">
+<div class="mobile-menu" id="mobileMenu">
+  <div class="close-menu" id="closeMenu">×</div>
 
+  <a href="index.html">HOME</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="about.html">ABOUT</a>
+  <a href="services.html">SERVICES</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="report.html">WEB REPORT</a>
+</div>
+
+<main class="report-page">
   <!-- TITLE -->
   <section class="report-header">
-    <h1>Web Development Project Report</h1>
-    <p>Lumi Architecture Studio Website — Student Portfolio Project · Autumn 2026</p>
-  </section>
+  <h4 class="report-subtitle">Academic Submission · Web Development</h4>
+  <h1 class="report-title">Web Development<br>Project Report</h1>
+  <div class="report-gold-line"></div>
+  <p class="report-meta">
+    Lumi Architecture Studio Website — Student Portfolio Project · Autumn 2026
+  </p>
+</section>
+
 
   <!-- TABS -->
   <div class="report-tabs">
@@ -183,141 +210,326 @@
   </section>
 
   <!-- TAB: SITEMAP -->
-  <section id="tab-sitemap" class="tab-content">
+<section id="tab-sitemap" class="tab-content">
 
-    <h2>Sitemap Diagram</h2>
-    <p>Primary page hierarchy and linking relationships for the Lumi Architecture Studio website.</p>
+  <div class="sitemap-header">
+    <h4 class="sitemap-subtitle">Information Architecture</h4>
+    <h2 class="sitemap-title">Sitemap Diagram</h2>
+    <div class="sitemap-gold-line"></div>
+    <p class="sitemap-description">
+      Click any node to navigate to that page. The diagram shows the primary page hierarchy 
+      and linking relationships of the Lumi Architecture Studio website.
+    </p>
+  </div>
 
-    <div class="sitemap-diagram">
-      <div class="node root">Home</div>
-
-      <div class="node-row">
-        <div class="node">Projects</div>
-        <div class="node">About</div>
-        <div class="node">Services</div>
-        <div class="node">Contact</div>
-        <div class="node">Web Report</div>
-      </div>
-
-      <div class="node-row">
-        <div class="node child">Residential (filter)</div>
-        <div class="node child">Commercial (filter)</div>
-        <div class="node child">Interior (filter)</div>
-      </div>
+    <!-- ROOT -->
+    <div class="sitemap-root">
+      <button class="sitemap-node root" data-link="index.html">HOME</button>
+      <div class="connector vertical"></div>
     </div>
 
-    <div class="sitemap-legend">
-      <p><span class="legend root"></span> Root page (entry point)</p>
-      <p><span class="legend nav"></span> Navigation link / connection</p>
-      <p><span class="legend node"></span> Secondary page node</p>
-      <p><span class="legend filter"></span> Filter / sub-category view</p>
+    <!-- MAIN ROW -->
+    <div class="sitemap-main-row">
+
+      <div class="sitemap-column projects-col">
+        <button class="sitemap-node" data-link="projects.html">PROJECTS</button>
+        <div class="connector vertical"></div>
+
+        <div class="sitemap-children">
+          <button class="sitemap-node child" data-link="projects.html#residential">RESIDENTIAL</button>
+          <button class="sitemap-node child" data-link="projects.html#commercial">COMMERCIAL</button>
+          <button class="sitemap-node child" data-link="projects.html#interior">INTERIOR</button>
+        </div>
+      </div>
+
+      <button class="sitemap-node" data-link="about.html">ABOUT</button>
+      <button class="sitemap-node" data-link="services.html">SERVICES</button>
+      <button class="sitemap-node" data-link="contact.html">CONTACT</button>
+      <button class="sitemap-node" data-link="report.html">WEB REPORT</button>
+
     </div>
 
-  </section>
+  </div>
+
+  <!-- LEGEND HORIZONTAL -->
+  <div class="sitemap-legend-horizontal">
+    <p><span class="legend root"></span> Root page</p>
+    <p><span class="legend nav"></span> Navigation link</p>
+    <p><span class="legend node"></span> Secondary page</p>
+    <p><span class="legend filter"></span> Filter / sub-category</p>
+  </div>
+
+</section>
 
   <!-- TAB: STYLE GUIDE -->
-  <section id="tab-style" class="tab-content">
+    <section id="tab-style" class="tab-content">
 
-    <h2>Style Guide</h2>
-
-    <section class="style-block">
-      <h3>Colour Palette</h3>
-      <div class="swatches">
-        <div class="swatch">
-          <div class="colour black"></div>
-          <p>Black — #080808<br>Page background</p>
-        </div>
-        <div class="swatch">
-          <div class="colour charcoal"></div>
-          <p>Charcoal — #141414<br>Section surfaces</p>
-        </div>
-        <div class="swatch">
-          <div class="colour charcoal-light"></div>
-          <p>Charcoal Light — #242424<br>Hover surfaces</p>
-        </div>
-        <div class="swatch">
-          <div class="colour gold"></div>
-          <p>Gold — #C9A86A<br>Accent / brand</p>
-        </div>
-        <div class="swatch">
-          <div class="colour soft-white"></div>
-          <p>Soft White — #F2F2F2<br>Primary text</p>
-        </div>
-        <div class="swatch">
-          <div class="colour muted"></div>
-          <p>Muted — #888888<br>Body / captions</p>
-        </div>
-        <div class="swatch">
-          <div class="colour border"></div>
-          <p>Border — #2E2E2E<br>Dividers / lines</p>
-        </div>
+      <div class="tab-header">
+        <p class="tab-eyebrow">Design System</p>
+        <h2 class="tab-title">Style Guide</h2>
+        <div class="tab-line"></div>
       </div>
+
+      <!-- COLOUR PALETTE -->
+      <section class="style-block">
+        <h3>Colour Palette</h3>
+        <div class="swatches">
+
+          <div class="swatch">
+            <div class="colour black"></div>
+            <div class="swatch-info">
+              <strong class="swatch-name">Black</strong>
+              <code class="swatch-hex">#080808</code>
+              <span class="swatch-use">Page background</span>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="colour charcoal"></div>
+            <div class="swatch-info">
+              <strong class="swatch-name">Charcoal</strong>
+              <code class="swatch-hex">#1A1A1A</code>
+              <span class="swatch-use">Section surfaces</span>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="colour charcoal-light"></div>
+            <div class="swatch-info">
+              <strong class="swatch-name">Charcoal Light</strong>
+              <code class="swatch-hex">#242424</code>
+              <span class="swatch-use">Hover surfaces</span>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="colour gold"></div>
+            <div class="swatch-info">
+              <strong class="swatch-name">Gold</strong>
+              <code class="swatch-hex">#C9A86A</code>
+              <span class="swatch-use">Accent / brand</span>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="colour soft-white"></div>
+            <div class="swatch-info">
+              <strong class="swatch-name">Soft White</strong>
+              <code class="swatch-hex">#F2F2F2</code>
+              <span class="swatch-use">Primary text</span>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="colour muted"></div>
+            <div class="swatch-info">
+              <strong class="swatch-name">Muted</strong>
+              <code class="swatch-hex">#888888</code>
+              <span class="swatch-use">Body / captions</span>
+            </div>
+          </div>
+
+          <div class="swatch">
+            <div class="colour border"></div>
+            <div class="swatch-info">
+              <strong class="swatch-name">Border</strong>
+              <code class="swatch-hex">#2E2E2E</code>
+              <span class="swatch-use">Dividers / lines</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- TYPOGRAPHY -->
+      <section class="style-block">
+        <h3>Typography</h3>
+        <div class="type-card">
+
+          <div class="type-row">
+            <div class="type-meta">
+              <span class="type-tag">H1</span>
+              <p>64px / 300<br>Montserrat</p>
+            </div>
+            <div class="type-sample h1">Lumi Architecture Studio</div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-meta">
+              <span class="type-tag">H2</span>
+              <p>40px / 300<br>Montserrat</p>
+            </div>
+            <div class="type-sample h2">Our Projects</div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-meta">
+              <span class="type-tag">H3</span>
+              <p>18px / 500<br>Montserrat</p>
+            </div>
+            <div class="type-sample h3">Material Honesty</div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-meta">
+              <span class="type-tag">Label</span>
+              <p>10px / 600<br>Tracked · Montserrat</p>
+            </div>
+            <div class="type-sample label">Our Disciplines</div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-meta">
+              <span class="type-tag">Body</span>
+              <p>14px / 400<br>1.8 line-height · Inter</p>
+            </div>
+            <div class="type-sample body">
+              We design buildings and interiors that respond to the Nordic climate — its long winters and fleeting summer light.
+            </div>
+          </div>
+
+          <div class="type-row">
+            <div class="type-meta">
+              <span class="type-tag">Small</span>
+              <p>11px / 400<br>Inter</p>
+            </div>
+            <div class="type-sample small">Espoo, Finland — 2024</div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- BUTTONS -->
+      <section class="style-block">
+        <h3>Button Styles</h3>
+        <div class="buttons-card">
+          <button class="btn-outline" type="button">Primary Outline</button>
+          <button class="btn-filled" type="button">Primary Filled (Hover)</button>
+          <button class="btn-filter" type="button">Filter Active</button>
+          <a class="btn-link" href="#">Text Link →</a>
+        </div>
+      </section>
+
+      <!-- FORM FIELDS -->
+      <section class="style-block">
+        <h3>Form Field Styles</h3>
+        <div class="form-card">
+
+          <div class="field">
+            <label for="field-default">Field label — default</label>
+            <input id="field-default" type="text" placeholder="Placeholder text...">
+          </div>
+
+          <div class="field focus">
+            <label for="field-focus">Field label — focus</label>
+            <input id="field-focus" type="text" value="Aino Virtanen">
+          </div>
+
+          <div class="field error">
+            <label for="field-error">Field label — error</label>
+            <input id="field-error" type="text" value="" aria-invalid="true" aria-describedby="field-error-text">
+            <span class="error-text" id="field-error-text">This field is required</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ICON SET -->
+      <section class="style-block">
+        <h3>Icon Set (SVG, 48×48, 1.5px stroke)</h3>
+        <div class="icon-grid">
+
+          <div class="icon-cell">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M8 40V12h16v28M24 40V22h16v18M4 40h40"/>
+              <path d="M13 18h6M13 24h6M13 30h6M29 28h6M29 34h6"/>
+            </svg>
+            <span>Residential</span>
+          </div>
+
+          <div class="icon-cell">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <rect x="9" y="8" width="30" height="32"/>
+              <path d="M9 18.7h30M9 29.3h30M19 8v32M29 8v32"/>
+            </svg>
+            <span>Commercial</span>
+          </div>
+
+          <div class="icon-cell">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <rect x="10" y="8" width="28" height="32"/>
+              <path d="M10 20h28M22 20v20"/>
+            </svg>
+            <span>Interior</span>
+          </div>
+
+          <div class="icon-cell">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <circle cx="24" cy="24" r="15"/>
+              <ellipse cx="24" cy="24" rx="6.5" ry="15"/>
+              <path d="M9 24h30"/>
+            </svg>
+            <span>Globe</span>
+          </div>
+
+          <div class="icon-cell">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M24 42s12-11 12-21a12 12 0 1 0-24 0c0 10 12 21 12 21z"/>
+              <circle cx="24" cy="21" r="4.5"/>
+            </svg>
+            <span>Location</span>
+          </div>
+
+          <div class="icon-cell">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <rect x="6" y="11" width="36" height="26"/>
+              <path d="M6 13l18 14 18-14"/>
+            </svg>
+            <span>Mail</span>
+          </div>
+
+          <div class="icon-cell">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path transform="translate(4.8 4.8) scale(1.6)" vector-effect="non-scaling-stroke"
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+            </svg>
+            <span>Phone</span>
+          </div>
+
+          <div class="icon-cell">
+            <svg viewBox="0 0 48 48" aria-hidden="true">
+              <path d="M8 24h32M29 13l11 11-11 11"/>
+            </svg>
+            <span>Arrow</span>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- LOGO VARIATIONS -->
+      <section class="style-block">
+        <h3>Logo Variations</h3>
+        <div class="logo-grid">
+
+          <div class="logo-panel on-black">
+            <img src="img/logo.svg" alt="Lumi logo on black">
+            <span>On Black</span>
+          </div>
+
+          <div class="logo-panel on-charcoal">
+            <img src="img/logo.svg" alt="Lumi logo on charcoal">
+            <span>On Charcoal</span>
+          </div>
+
+          <div class="logo-panel on-warm">
+            <img src="img/logo.svg" alt="Lumi logo on dark warm">
+            <span>On Dark Warm</span>
+          </div>
+
+        </div>
+      </section>
+
     </section>
-
-    <section class="style-block">
-      <h3>Typography</h3>
-
-      <div class="type-row">
-        <div class="type-sample h1">Lumi Architecture Studio</div>
-        <p>H1 · 64px / 300 · Montserrat</p>
-      </div>
-
-      <div class="type-row">
-        <div class="type-sample h2">Our Projects</div>
-        <p>H2 · 40px / 300 · Montserrat</p>
-      </div>
-
-      <div class="type-row">
-        <div class="type-sample h3">Material Honesty</div>
-        <p>H3 · 18px / 500 · Montserrat</p>
-      </div>
-
-      <div class="type-row">
-        <div class="type-sample label">OUR DISCIPLINES</div>
-        <p>Label · 10px / 600 · tracked · Montserrat</p>
-      </div>
-
-      <div class="type-row">
-        <div class="type-sample body">
-          We design buildings and interiors that respond to the Nordic climate — its long winters and fleeting summer light.
-        </div>
-        <p>Body · 14px / 400 · 1.8 line-height · Inter</p>
-      </div>
-
-      <div class="type-row">
-        <div class="type-sample small">Espoo, Finland — 2024</div>
-        <p>Small · 11px / 400 · Inter</p>
-      </div>
-    </section>
-
-    <section class="style-block">
-      <h3>Buttons & Form Fields</h3>
-
-      <div class="buttons-row">
-        <button class="btn-outline">PRIMARY OUTLINE</button>
-        <button class="btn-filled">PRIMARY FILLED (HOVER)</button>
-        <button class="btn-filter">FILTER ACTIVE</button>
-        <a class="btn-link" href="#">TEXT LINK →</a>
-      </div>
-
-      <div class="form-row">
-        <div class="field">
-          <label>FIELD LABEL — DEFAULT</label>
-          <input type="text" placeholder="Placeholder text...">
-        </div>
-        <div class="field">
-          <label>FIELD LABEL — FOCUS</label>
-          <input type="text" value="Aino Virtanen">
-        </div>
-        <div class="field error">
-          <label>FIELD LABEL — ERROR</label>
-          <input type="text" value="">
-          <span class="error-text">This field is required</span>
-        </div>
-      </div>
-    </section>
-
-  </section>
 
   <!-- TAB: WIREFRAMES -->
   <section id="tab-wireframes" class="tab-content">
@@ -325,11 +537,21 @@
     <h2>Page Wireframes</h2>
     <p>Low-fidelity wireframes showing the layout logic for each page at 1440px desktop width.</p>
 
+    <div class="wireframe-filters">
+      <button data-page="home" class="active">Home</button>
+      <button data-page="projects">Projects</button>
+      <button data-page="about">About</button>
+      <button data-page="services">Services</button>
+      <button data-page="contact">Contact</button>
+      <button data-page="report">Web Report</button>
+    </div>
+
     <div class="wireframe">
-      <div class="block hero"></div>
-      <div class="block stats"></div>
-      <div class="block grid"></div>
-      <div class="block footer"></div>
+      <img
+        src="img/wireframes/home.png"
+        alt="Home page wireframe"
+        class="wireframe-image"
+      >
     </div>
 
   </section>
@@ -337,10 +559,8 @@
 </main>
 
 <footer class="footer">
-
   <div class="footer-grid">
 
-    <!-- COLUMN 1 -->
     <div class="footer-col">
       <h3>LUMI Architecture Studio</h3>
       <p>
@@ -355,7 +575,6 @@
       </div>
     </div>
 
-    <!-- COLUMN 2 -->
     <div class="footer-col">
       <h4>Navigation</h4>
       <a href="index.html">Home</a>
@@ -366,7 +585,6 @@
       <a href="report.html">Web Report</a>
     </div>
 
-    <!-- COLUMN 3 -->
     <div class="footer-col">
       <h4>Services</h4>
       <a href="services.html">Residential Architecture</a>
@@ -375,24 +593,22 @@
       <a href="services.html">Sustainability Consulting</a>
     </div>
 
-    <!-- COLUMN 4 -->
     <div class="footer-col">
       <h4>Contact</h4>
       <p>Eteläesplanadi 14<br>00130 Helsinki, Finland</p>
       <p>studio@lumiarch.fi</p>
       <p>+358 9 123 4567</p>
-      <p class="footer-locations">Helsinki · Tampere · Stockholm</p>
     </div>
 
   </div>
 
   <div class="footer-bottom">
-    © 2026 Lumi Architecture Studio. All rights reserved.
+    <span>© 2026 Lumi Architecture Studio. All rights reserved.</span>
+    <span class="footer-locations">Helsinki · Tampere · Stockholm</span>
   </div>
-
 </footer>
 
+<script src="js/nav.js"></script>
 <script src="js/report.js"></script>
-
 </body>
 </html>
