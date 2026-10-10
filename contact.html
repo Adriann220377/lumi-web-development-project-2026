@@ -4,17 +4,20 @@
   <meta charset="UTF-8">
   <title>Contact — Lumi Architecture Studio</title>
 
-  <!-- Global styles -->
   <link rel="stylesheet" href="css/style.css">
-
-  <!-- Contact page styles -->
   <link rel="stylesheet" href="css/contact.css">
 </head>
 
 <body>
 
-<header>
-  <nav>
+<header class="navbar">
+  <div class="nav-left">
+    <a href="index.html" class="logo">
+      <img src="img/logo.svg" alt="Lumi Architecture Studio Logo">
+    </a>
+  </div>
+
+  <nav class="nav-center">
     <a href="index.html">HOME</a>
     <a href="projects.html">PROJECTS</a>
     <a href="about.html">ABOUT</a>
@@ -22,7 +25,24 @@
     <a href="contact.html">CONTACT</a>
     <a href="report.html">WEB REPORT</a>
   </nav>
+
+  <div class="nav-right">
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
 </header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <div class="close-menu" id="closeMenu">×</div>
+
+  <a href="index.html">HOME</a>
+  <a href="projects.html">PROJECTS</a>
+  <a href="about.html">ABOUT</a>
+  <a href="services.html">SERVICES</a>
+  <a href="contact.html">CONTACT</a>
+  <a href="report.html">WEB REPORT</a>
+</div>
 
 <main class="contact-page">
 
@@ -30,6 +50,8 @@
   <section class="contact-intro">
     <h3>GET IN TOUCH</h3>
     <h1>Start a Conversation</h1>
+    <div class="gold-line"></div>
+
     <p>
       Every project begins with a conversation. Tell us about your site, your programme,
       and your timeline — and we will tell you honestly whether we are the right studio for the work.
@@ -39,8 +61,10 @@
   <!-- CONTACT GRID -->
   <section class="contact-grid">
 
-    <!-- LEFT SIDE: INFO -->
+    <!-- LEFT SIDE -->
     <div class="contact-info">
+
+      <div class="info-line"></div>
 
       <h2>Studio Address</h2>
       <p>Eteläesplanadi 14<br>00130 Helsinki, Finland</p>
@@ -54,7 +78,6 @@
       <h2>Office Hours</h2>
       <p>Mon–Fri 09:00–17:00 EET</p>
 
-      <!-- MAP -->
       <div class="map">
         <iframe
           width="100%"
@@ -67,8 +90,10 @@
 
     </div>
 
-    <!-- RIGHT SIDE: FORM -->
+    <!-- RIGHT SIDE FORM -->
     <form class="contact-form">
+
+      <div class="form-line"></div>
 
       <label>Full Name</label>
       <input type="text" placeholder="Your full name">
@@ -79,7 +104,7 @@
       <label>Message</label>
       <textarea placeholder="Tell us about your site, programme, and timeline..."></textarea>
 
-      <button type="submit">Send Message</button>
+      <button type="submit">SEND MESSAGE</button>
 
     </form>
 
@@ -88,10 +113,8 @@
 </main>
 
 <footer class="footer">
-
   <div class="footer-grid">
 
-    <!-- COLUMN 1 -->
     <div class="footer-col">
       <h3>LUMI Architecture Studio</h3>
       <p>
@@ -106,7 +129,6 @@
       </div>
     </div>
 
-    <!-- COLUMN 2 -->
     <div class="footer-col">
       <h4>Navigation</h4>
       <a href="index.html">Home</a>
@@ -117,7 +139,6 @@
       <a href="report.html">Web Report</a>
     </div>
 
-    <!-- COLUMN 3 -->
     <div class="footer-col">
       <h4>Services</h4>
       <a href="services.html">Residential Architecture</a>
@@ -126,22 +147,21 @@
       <a href="services.html">Sustainability Consulting</a>
     </div>
 
-    <!-- COLUMN 4 -->
     <div class="footer-col">
       <h4>Contact</h4>
       <p>Eteläesplanadi 14<br>00130 Helsinki, Finland</p>
       <p>studio@lumiarch.fi</p>
       <p>+358 9 123 4567</p>
-      <p class="footer-locations">Helsinki · Tampere · Stockholm</p>
     </div>
 
   </div>
 
   <div class="footer-bottom">
-    © 2026 Lumi Architecture Studio. All rights reserved.
+    <span>© 2026 Lumi Architecture Studio. All rights reserved.</span>
+    <span class="footer-locations">Helsinki · Tampere · Stockholm</span>
   </div>
-
 </footer>
 
+<script src="js/nav.js"></script>
 </body>
 </html>

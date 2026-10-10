@@ -1,36 +1,60 @@
 /* INTRO */
 .contact-intro {
-  text-align: center;
-  padding: 120px 40px 60px;
+  padding: 120px 40px 40px;
+  text-align: left;
 }
 
 .contact-intro h3 {
   color: var(--gold);
+  letter-spacing: 2px;
   margin-bottom: 10px;
 }
 
 .contact-intro h1 {
-  margin-bottom: 20px;
+  font-size: 60px;
+  font-weight: 300;
+  color: var(--white);
+}
+
+.gold-line {
+  width: 100px;
+  height: 2px;
+  background: var(--gold);
+  margin: 20px 0 30px 0;
 }
 
 .contact-intro p {
   color: var(--muted);
   max-width: 600px;
-  margin: 0 auto;
+  line-height: 1.6;
 }
 
 /* GRID */
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 40px;
+  gap: 60px;
   padding: 40px;
 }
 
 /* LEFT SIDE */
+.contact-info {
+  position: relative;
+}
+
+.info-line {
+  position: absolute;
+  left: -20px;
+  top: 0;
+  width: 2px;
+  height: 395px;
+  background: var(--border);
+}
+
 .contact-info h2 {
   color: var(--gold);
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .contact-info p {
@@ -40,6 +64,7 @@
 
 .map iframe {
   border: 1px solid var(--border);
+  margin-top: 20px;
 }
 
 /* FORM */
@@ -47,20 +72,37 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  position: relative;
+}
+
+.form-line {
+  width: 500px;
+  height: 2px;
+  background: var(--gold);
+  margin-bottom: 20px;
 }
 
 .contact-form label {
   color: var(--white);
   font-size: 14px;
+  letter-spacing: 1px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  background-color: var(--charcoal);
-  border: 1px solid var(--border);
-  padding: 12px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  padding: 10px 0;
   color: var(--white);
   font-size: 14px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom: 1px solid var(--gold);
 }
 
 .contact-form textarea {
@@ -68,18 +110,21 @@
   resize: none;
 }
 
+/* BUTTON */
 .contact-form button {
-  background-color: var(--gold);
-  color: var(--black);
+  background: transparent;
+  border: 1px solid var(--gold);
+  color: var(--gold);
   padding: 12px;
-  border: none;
-  cursor: pointer;
   font-weight: bold;
   letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.contact-form button:hover {
-  background-color: var(--white);
+.contact-form button:hover,
+.contact-form button:active {
+  background: var(--gold);
   color: var(--black);
 }
 
@@ -87,5 +132,9 @@
 @media (max-width: 768px) {
   .contact-grid {
     grid-template-columns: 1fr;
+  }
+
+  .info-line {
+    left: 0;
   }
 }
