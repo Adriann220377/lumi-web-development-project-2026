@@ -1,0 +1,13 @@
+<svg width="32" height="32" viewBox="0 0 512 512" fill="none" stroke="#C9A86A" stroke-width="20" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Building outline -->
+  <path d="M440 424V88H352V32L88 80V424H16"/>
+  <path d="M16 456H440"/>
+
+  <!-- Inner tower -->
+  <path d="M320 448L120 420V85L320 48V448Z"/>
+
+  <!-- Central column -->
+  <rect x="256" y="232" width="32" height="64"/>
+
+</svg>
