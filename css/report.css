@@ -119,10 +119,6 @@
 }
 
 /* ===========================
-   INTERACTIVE SITEMAP (FINAL)
-   =========================== */
-
-/* ===========================
    SITEMAP HEADER STYLING
    =========================== */
 .sitemap-header {
@@ -291,21 +287,40 @@
   margin-top: 72px;
 }
  
-.style-block h3 {
+/* ===========================
+   STYLE GUIDE TAB HEADER
+   =========================== */
+
+.tab-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/* Gold eyebrow */
+.tab-eyebrow {
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* Big white title */
+.tab-title {
   color: var(--white);
-  font-size: 20px;
-  font-weight: 400;
-  margin: 0 0 28px;
+  font-size: 42px;
+  font-weight: 300;
+  margin-bottom: 16px;
 }
- 
-.style-block h3::after {
-  content: "";
-  display: block;
-  width: 40px;
+
+/* Gold underline */
+.tab-line {
+  width: 120px;
   height: 2px;
-  background: var(--gold);
-  margin-top: 12px;
+  background-color: var(--gold);
+  margin-bottom: 20px;
 }
+
  
 /* --- Colour palette --- */
 .swatches {
@@ -602,6 +617,45 @@
 }
 
 /* WIREFRAMES */
+
+.wireframe-header {
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/* Gold eyebrow */
+.wireframe-eyebrow {
+  color: var(--gold);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+/* Big white title */
+.wireframe-title {
+  color: var(--white);
+  font-size: 42px;
+  font-weight: 300;
+  margin-bottom: 16px;
+}
+
+/* Gold underline */
+.wireframe-line {
+  width: 120px;
+  height: 2px;
+  background-color: var(--gold);
+  margin-bottom: 20px;
+}
+
+/* Grey description */
+.wireframe-description {
+  color: var(--muted);
+  font-size: 15px;
+  max-width: 700px;
+  line-height: 1.6;
+}
+
 .wireframe-filters {
   margin-top: 20px;
   margin-bottom: 20px;
