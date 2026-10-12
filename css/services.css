@@ -167,23 +167,146 @@
   line-height: 1.6;
 }
 
-/* RESPONSIVE */
+/* ============================
+   SERVICES PAGE — RESPONSIVE
+=========================== */
+
+/* ===== Tablet (≤ 900px) ===== */
 @media (max-width: 900px) {
+
+  /* PAGE PADDING */
+  .services-page {
+    padding: 80px 20px;
+  }
+
+  /* HEADER */
+  .services-header h1 {
+    font-size: 40px;
+  }
+
+  .services-line {
+    width: 100px;
+  }
+
+  /* SERVICES GRID */
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* SERVICE CARD */
+  .service-card {
+    padding: 24px;
+  }
+
+  .service-card img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+  }
+
+  .service-card p {
+    font-size: 14px;
+  }
+
+  /* TAGS */
+  .service-tags span {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+
+  /* PROCESS SECTION */
+  .process-header h2 {
+    font-size: 32px;
+  }
+
+  .process-line {
+    width: 90px;
   }
 
   .process-steps {
     grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .process-step h4 {
+    font-size: 18px;
+  }
+
+  .process-step p {
+    font-size: 14px;
   }
 }
 
+/* ===== Mobile (≤ 600px) ===== */
 @media (max-width: 600px) {
+
+  /* PAGE PADDING */
+  .services-page {
+    padding: 60px 16px;
+  }
+
+  /* HEADER */
+  .services-header h1 {
+    font-size: 32px;
+  }
+
+  .services-line {
+    width: 80px;
+  }
+
+  /* SERVICES GRID */
   .services-grid {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* SERVICE CARD */
+  .service-card {
+    padding: 20px;
+  }
+
+  .service-card img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .service-card h3 {
+    font-size: 18px;
+  }
+
+  .service-card p {
+    font-size: 13px;
+  }
+
+  /* TAGS */
+  .service-tags span {
+    font-size: 10px;
+    padding: 5px 8px;
+  }
+
+  /* PROCESS SECTION */
+  .process-header h2 {
+    font-size: 26px;
+  }
+
+  .process-line {
+    width: 70px;
   }
 
   .process-steps {
     grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .process-step h4 {
+    font-size: 16px;
+  }
+
+  .process-step p {
+    font-size: 13px;
   }
 }

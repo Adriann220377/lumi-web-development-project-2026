@@ -313,46 +313,120 @@
 }
 
 /* ============================
-   RESPONSIVE
-============================ */
+   HOME PAGE — RESPONSIVE
+=========================== */
+
+/* ===== Tablet (≤ 900px) ===== */
 @media (max-width: 900px) {
-  .disciplines-grid,
-  .featured-grid {
-    grid-template-columns: 1fr 1fr;
+
+  /* HERO */
+  .hero {
+    padding-left: 40px;
+    height: 80vh;
   }
 
-  .philosophy {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 768px) {
   .hero-title {
-    font-size: 50px;
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 18px;
+    max-width: 90%;
   }
 
   .cta {
     width: 240px;
+    padding: 12px 20px;
   }
 
-  .disciplines-grid,
-  .featured-grid {
-    grid-template-columns: 1fr;
-  }
-
+  /* STATS */
   .stats {
     flex-direction: column;
     gap: 20px;
     text-align: center;
+    padding: 40px 20px;
+  }
+
+  /* DISCIPLINES GRID */
+  .disciplines-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  /* PHILOSOPHY SECTION */
+  .philosophy {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .philosophy-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* FEATURED PROJECTS */
+  .featured-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 }
 
-@media (max-width: 480px) {
+/* ===== Mobile (≤ 600px) ===== */
+@media (max-width: 600px) {
+
+  /* HERO */
+  .hero {
+    padding-left: 20px;
+    height: auto;
+    padding-top: 120px;
+    padding-bottom: 80px;
+  }
+
   .hero-title {
-    font-size: 38px;
+    font-size: 36px;
   }
 
   .hero p {
     font-size: 16px;
+    max-width: 100%;
+  }
+
+  .cta {
+    width: 200px;
+    padding: 10px 18px;
+    font-size: 12px;
+  }
+
+  /* STATS */
+  .stats {
+    flex-direction: column;
+    gap: 16px;
+    padding: 30px 10px;
+  }
+
+  /* DISCIPLINES GRID */
+  .disciplines-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* FEATURED PROJECTS */
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  /* PHILOSOPHY */
+  .philosophy {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .philosophy h2 {
+    font-size: 24px;
+  }
+
+  .philosophy p {
+    font-size: 14px;
   }
 }

@@ -90,6 +90,28 @@ a:hover {
   align-items: center;
 }
 
+.nav-link {
+  position: relative;
+  color: var(--white);
+  padding-bottom: 4px;
+}
+
+.nav-link.active {
+  color: var(--gold);
+}
+
+.nav-link.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 100%;
+  height: 2px;
+  background: var(--gold);
+}
+
+
+
 .hamburger {
   width: 28px;
   height: 20px;
@@ -267,25 +289,30 @@ section {
 }
 
 /* ============================
-   RESPONSIVE
+   GLOBAL RESPONSIVE SYSTEM
 ============================ */
-/* Hide nav-center on mobile */
+
+/* ===== Tablet (≤ 900px) ===== */
 @media (max-width: 900px) {
+
+  /* NAVIGATION */
   .nav-center {
     display: none;
   }
-}
 
-/* Show hamburger only on mobile */
-@media (max-width: 900px) {
   .hamburger {
     display: flex;
   }
-}
 
-@media (max-width: 900px) {
+  /* GLOBAL SPACING */
+  section {
+    padding: 60px 20px;
+  }
+
+  /* FOOTER */
   .footer-grid {
     grid-template-columns: 1fr 1fr;
+    gap: 20px;
   }
 
   .footer-bottom {
@@ -293,19 +320,70 @@ section {
     gap: 8px;
     text-align: center;
   }
+
+  /* GLOBAL TYPE */
+  h1, .report-title, .sitemap-title, .tab-title, .wireframe-title {
+    font-size: 32px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p, li {
+    font-size: 14px;
+    line-height: 1.6;
+  }
 }
 
-@media (max-width: 768px) {
+/* ===== Mobile (≤ 600px) ===== */
+@media (max-width: 600px) {
+
+  /* NAVIGATION */
   .nav-center {
-    gap: 16px;
-    font-size: 12px;
+    display: none;
   }
 
+  .hamburger {
+    display: flex;
+  }
+
+  /* GLOBAL SPACING */
   section {
-    padding: 60px 20px;
+    padding: 50px 16px;
   }
 
+  /* FOOTER */
   .footer-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  /* GLOBAL TYPE */
+  h1, .report-title, .sitemap-title, .tab-title, .wireframe-title {
+    font-size: 26px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  p, li {
+    font-size: 13px;
+    line-height: 1.6;
   }
 }

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Web Report — Lumi Architecture Studio</title>
 
   <link rel="stylesheet" href="css/style.css">
@@ -23,7 +24,7 @@
     <a href="about.html">ABOUT</a>
     <a href="services.html">SERVICES</a>
     <a href="contact.html">CONTACT</a>
-    <a href="report.html">WEB REPORT</a>
+    <a href="report.html" class="nav-link">WEB REPORT</a>
   </nav>
 
   <div class="nav-right">
@@ -60,7 +61,6 @@
   <div class="report-tabs">
     <button data-tab="report" class="active">Report</button>
     <button data-tab="sitemap">Sitemap</button>
-    <button data-tab="style">Style Guide</button>
     <button data-tab="wireframes">Wireframes</button>
   </div>
 
@@ -209,7 +209,7 @@
 
   </section>
 
-  <!-- TAB: SITEMAP -->
+<!-- TAB: SITEMAP -->
 <section id="tab-sitemap" class="tab-content">
 
   <div class="sitemap-header">
@@ -222,6 +222,9 @@
     </p>
   </div>
 
+  <!-- REQUIRED WRAPPER -->
+  <div class="sitemap-container">
+
     <!-- ROOT -->
     <div class="sitemap-root">
       <button class="sitemap-node root" data-link="index.html">HOME</button>
@@ -231,7 +234,8 @@
     <!-- MAIN ROW -->
     <div class="sitemap-main-row">
 
-      <div class="sitemap-column projects-col">
+      <!-- PROJECTS COLUMN -->
+      <div class="projects-col">
         <button class="sitemap-node" data-link="projects.html">PROJECTS</button>
         <div class="connector vertical"></div>
 
@@ -242,16 +246,17 @@
         </div>
       </div>
 
+      <!-- OTHER MAIN PAGES -->
       <button class="sitemap-node" data-link="about.html">ABOUT</button>
       <button class="sitemap-node" data-link="services.html">SERVICES</button>
       <button class="sitemap-node" data-link="contact.html">CONTACT</button>
       <button class="sitemap-node" data-link="report.html">WEB REPORT</button>
 
-    </div>
+    </div> <!-- closes sitemap-main-row -->
 
-  </div>
+  </div> <!-- closes sitemap-container -->
 
-  <!-- LEGEND HORIZONTAL -->
+  <!-- LEGEND -->
   <div class="sitemap-legend-horizontal">
     <p><span class="legend root"></span> Root page</p>
     <p><span class="legend nav"></span> Navigation link</p>
@@ -260,277 +265,6 @@
   </div>
 
 </section>
-
-  <!-- TAB: STYLE GUIDE -->
-    <section id="tab-style" class="tab-content">
-
-      <div class="tab-header">
-      <p class="tab-eyebrow">Design System</p>
-      <h2 class="tab-title">Style Guide</h2>
-      <div class="tab-line"></div>
-      </div>
-
-
-      <!-- COLOUR PALETTE -->
-      <section class="style-block">
-        <h3>Colour Palette</h3>
-        <div class="swatches">
-
-          <div class="swatch">
-            <div class="colour black"></div>
-            <div class="swatch-info">
-              <strong class="swatch-name">Black</strong>
-              <code class="swatch-hex">#080808</code>
-              <span class="swatch-use">Page background</span>
-            </div>
-          </div>
-
-          <div class="swatch">
-            <div class="colour charcoal"></div>
-            <div class="swatch-info">
-              <strong class="swatch-name">Charcoal</strong>
-              <code class="swatch-hex">#1A1A1A</code>
-              <span class="swatch-use">Section surfaces</span>
-            </div>
-          </div>
-
-          <div class="swatch">
-            <div class="colour charcoal-light"></div>
-            <div class="swatch-info">
-              <strong class="swatch-name">Charcoal Light</strong>
-              <code class="swatch-hex">#242424</code>
-              <span class="swatch-use">Hover surfaces</span>
-            </div>
-          </div>
-
-          <div class="swatch">
-            <div class="colour gold"></div>
-            <div class="swatch-info">
-              <strong class="swatch-name">Gold</strong>
-              <code class="swatch-hex">#C9A86A</code>
-              <span class="swatch-use">Accent / brand</span>
-            </div>
-          </div>
-
-          <div class="swatch">
-            <div class="colour soft-white"></div>
-            <div class="swatch-info">
-              <strong class="swatch-name">Soft White</strong>
-              <code class="swatch-hex">#F2F2F2</code>
-              <span class="swatch-use">Primary text</span>
-            </div>
-          </div>
-
-          <div class="swatch">
-            <div class="colour muted"></div>
-            <div class="swatch-info">
-              <strong class="swatch-name">Muted</strong>
-              <code class="swatch-hex">#888888</code>
-              <span class="swatch-use">Body / captions</span>
-            </div>
-          </div>
-
-          <div class="swatch">
-            <div class="colour border"></div>
-            <div class="swatch-info">
-              <strong class="swatch-name">Border</strong>
-              <code class="swatch-hex">#2E2E2E</code>
-              <span class="swatch-use">Dividers / lines</span>
-            </div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- TYPOGRAPHY -->
-      <section class="style-block">
-        <h3>Typography</h3>
-        <div class="type-card">
-
-          <div class="type-row">
-            <div class="type-meta">
-              <span class="type-tag">H1</span>
-              <p>64px / 300<br>Montserrat</p>
-            </div>
-            <div class="type-sample h1">Lumi Architecture Studio</div>
-          </div>
-
-          <div class="type-row">
-            <div class="type-meta">
-              <span class="type-tag">H2</span>
-              <p>40px / 300<br>Montserrat</p>
-            </div>
-            <div class="type-sample h2">Our Projects</div>
-          </div>
-
-          <div class="type-row">
-            <div class="type-meta">
-              <span class="type-tag">H3</span>
-              <p>18px / 500<br>Montserrat</p>
-            </div>
-            <div class="type-sample h3">Material Honesty</div>
-          </div>
-
-          <div class="type-row">
-            <div class="type-meta">
-              <span class="type-tag">Label</span>
-              <p>10px / 600<br>Tracked · Montserrat</p>
-            </div>
-            <div class="type-sample label">Our Disciplines</div>
-          </div>
-
-          <div class="type-row">
-            <div class="type-meta">
-              <span class="type-tag">Body</span>
-              <p>14px / 400<br>1.8 line-height · Inter</p>
-            </div>
-            <div class="type-sample body">
-              We design buildings and interiors that respond to the Nordic climate — its long winters and fleeting summer light.
-            </div>
-          </div>
-
-          <div class="type-row">
-            <div class="type-meta">
-              <span class="type-tag">Small</span>
-              <p>11px / 400<br>Inter</p>
-            </div>
-            <div class="type-sample small">Espoo, Finland — 2024</div>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- BUTTONS -->
-      <section class="style-block">
-        <h3>Button Styles</h3>
-        <div class="buttons-card">
-          <button class="btn-outline" type="button">Primary Outline</button>
-          <button class="btn-filled" type="button">Primary Filled (Hover)</button>
-          <button class="btn-filter" type="button">Filter Active</button>
-          <a class="btn-link" href="#">Text Link →</a>
-        </div>
-      </section>
-
-      <!-- FORM FIELDS -->
-      <section class="style-block">
-        <h3>Form Field Styles</h3>
-        <div class="form-card">
-
-          <div class="field">
-            <label for="field-default">Field label — default</label>
-            <input id="field-default" type="text" placeholder="Placeholder text...">
-          </div>
-
-          <div class="field focus">
-            <label for="field-focus">Field label — focus</label>
-            <input id="field-focus" type="text" value="Aino Virtanen">
-          </div>
-
-          <div class="field error">
-            <label for="field-error">Field label — error</label>
-            <input id="field-error" type="text" value="" aria-invalid="true" aria-describedby="field-error-text">
-            <span class="error-text" id="field-error-text">This field is required</span>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- ICON SET -->
-      <section class="style-block">
-        <h3>Icon Set (SVG, 48×48, 1.5px stroke)</h3>
-        <div class="icon-grid">
-
-          <div class="icon-cell">
-            <svg viewBox="0 0 48 48" aria-hidden="true">
-              <path d="M8 40V12h16v28M24 40V22h16v18M4 40h40"/>
-              <path d="M13 18h6M13 24h6M13 30h6M29 28h6M29 34h6"/>
-            </svg>
-            <span>Residential</span>
-          </div>
-
-          <div class="icon-cell">
-            <svg viewBox="0 0 48 48" aria-hidden="true">
-              <rect x="9" y="8" width="30" height="32"/>
-              <path d="M9 18.7h30M9 29.3h30M19 8v32M29 8v32"/>
-            </svg>
-            <span>Commercial</span>
-          </div>
-
-          <div class="icon-cell">
-            <svg viewBox="0 0 48 48" aria-hidden="true">
-              <rect x="10" y="8" width="28" height="32"/>
-              <path d="M10 20h28M22 20v20"/>
-            </svg>
-            <span>Interior</span>
-          </div>
-
-          <div class="icon-cell">
-            <svg viewBox="0 0 48 48" aria-hidden="true">
-              <circle cx="24" cy="24" r="15"/>
-              <ellipse cx="24" cy="24" rx="6.5" ry="15"/>
-              <path d="M9 24h30"/>
-            </svg>
-            <span>Globe</span>
-          </div>
-
-          <div class="icon-cell">
-            <svg viewBox="0 0 48 48" aria-hidden="true">
-              <path d="M24 42s12-11 12-21a12 12 0 1 0-24 0c0 10 12 21 12 21z"/>
-              <circle cx="24" cy="21" r="4.5"/>
-            </svg>
-            <span>Location</span>
-          </div>
-
-          <div class="icon-cell">
-            <svg viewBox="0 0 48 48" aria-hidden="true">
-              <rect x="6" y="11" width="36" height="26"/>
-              <path d="M6 13l18 14 18-14"/>
-            </svg>
-            <span>Mail</span>
-          </div>
-
-          <div class="icon-cell">
-            <svg viewBox="0 0 48 48" aria-hidden="true">
-              <path transform="translate(4.8 4.8) scale(1.6)" vector-effect="non-scaling-stroke"
-                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-            </svg>
-            <span>Phone</span>
-          </div>
-
-          <div class="icon-cell">
-            <svg viewBox="0 0 48 48" aria-hidden="true">
-              <path d="M8 24h32M29 13l11 11-11 11"/>
-            </svg>
-            <span>Arrow</span>
-          </div>
-
-        </div>
-      </section>
-
-      <!-- LOGO VARIATIONS -->
-      <section class="style-block">
-        <h3>Logo Variations</h3>
-        <div class="logo-grid">
-
-          <div class="logo-panel on-black">
-            <img src="img/logo.svg" alt="Lumi logo on black">
-            <span>On Black</span>
-          </div>
-
-          <div class="logo-panel on-charcoal">
-            <img src="img/logo.svg" alt="Lumi logo on charcoal">
-            <span>On Charcoal</span>
-          </div>
-
-          <div class="logo-panel on-warm">
-            <img src="img/logo.svg" alt="Lumi logo on dark warm">
-            <span>On Dark Warm</span>
-          </div>
-
-        </div>
-      </section>
-
-    </section>
 
   <!-- TAB: WIREFRAMES -->
   <section id="tab-wireframes" class="tab-content">

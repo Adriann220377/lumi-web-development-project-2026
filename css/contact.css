@@ -1,6 +1,6 @@
 /* INTRO */
 .contact-intro {
-  padding: 120px 40px 40px;
+  padding: 100px 40px 40px;
   text-align: left;
 }
 
@@ -47,7 +47,7 @@
   left: -20px;
   top: 0;
   width: 2px;
-  height: 395px;
+  height: 100%;
   background: var(--border);
 }
 
@@ -65,6 +65,8 @@
 .map iframe {
   border: 1px solid var(--border);
   margin-top: 20px;
+  width: 100%;
+  height: 350px;
 }
 
 /* FORM */
@@ -76,7 +78,8 @@
 }
 
 .form-line {
-  width: 500px;
+  width: 100%;
+  max-width: 420px;
   height: 2px;
   background: var(--gold);
   margin-bottom: 20px;
@@ -128,13 +131,92 @@
   color: var(--black);
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
+/* ============================
+   CONTACT PAGE — RESPONSIVE
+=========================== */
+
+/* ===== Tablet (≤ 900px) ===== */
+@media (max-width: 900px) {
+
+  .contact-intro {
+    padding: 80px 20px 20px;
+  }
+
+  .contact-intro h1 {
+    font-size: 42px;
+  }
+
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 20px;
   }
 
   .info-line {
     left: 0;
+    height: 100%;
+  }
+
+  .contact-form {
+    padding: 10px 0;
+  }
+
+  .form-line {
+    max-width: 100%;
+  }
+
+  .map iframe {
+    height: 300px;
+  }
+}
+
+/* ===== Mobile (≤ 600px) ===== */
+@media (max-width: 600px) {
+
+  .contact-intro {
+    padding: 60px 16px 20px;
+  }
+
+  .contact-intro h1 {
+    font-size: 32px;
+  }
+
+  .gold-line {
+    width: 80px;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 0;
+  }
+
+  .contact-info {
+    padding-left: 10px;
+  }
+
+  .info-line {
+    left: 0;
+    height: 100%;
+  }
+
+  .contact-form {
+    padding: 0;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 13px;
+  }
+
+  .contact-form button {
+    width: 100%;
+    padding: 12px;
+    font-size: 13px;
+  }
+
+  .map iframe {
+    height: 240px;
+    width: 100%;
   }
 }

@@ -8,6 +8,31 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// NAVBAR ACTIVE LINK UNDERLINE
+const links = document.querySelectorAll('.nav-link');
+const underline = document.createElement('div');
+underline.classList.add('nav-underline');
+document.querySelector('nav').appendChild(underline);
+
+function updateUnderline() {
+  const active = document.querySelector('.nav-link.active');
+  if (!active) return;
+
+  const rect = active.getBoundingClientRect();
+  underline.style.width = rect.width + "px";
+  underline.style.left = active.offsetLeft + "px";
+}
+
+links.forEach(link => {
+  if (link.href.includes(location.pathname)) {
+    link.classList.add('active');
+  }
+});
+
+updateUnderline();
+window.addEventListener('resize', updateUnderline);
+
+
 // MOBILE MENU OPEN/CLOSE
 const ham = document.getElementById("hamburger");
 const menu = document.getElementById("mobileMenu");

@@ -42,47 +42,53 @@
   max-width: 620px;
 }
 
-/* IMAGE WITH GOLD CORNERS */
+/* ============================
+   IMAGE WITH GOLD CORNER LINES
+=========================== */
+
 .image-wrapper {
   position: relative;
-  max-width: 560px;
+  max-width: 550px;
   margin-left: auto;
 }
 
 .image-wrapper img {
-  width: 600px;
+  width: 100%;
   height: 600px;
   display: block;
   border: none;
 }
 
-.image-corners::before{
+/* Gold corner L-shapes */
+.image-wrapper::before,
+.image-wrapper::after {
   content: "";
   position: absolute;
   width: 32px;
-  height: 30px;
+  height: 32px;
   border: 2px solid var(--gold);
 }
 
-.image-corners::after {
-  content: "";
-  position: absolute;
-  width: 42px;
-  height: 46px;
-  border: 2px solid var(--gold);
+/* Top-left corner */
+.image-wrapper::before {
+  top: -10px;
+  left: -10px;
+  border-right: none;
+  border-bottom: none;
 }
 
-.image-corners::before {
-  top: -14px;
-  left: -14px;
+/* Bottom-right corner */
+.image-wrapper::after {
+  bottom: -10px;
+  right: -10px;
+  border-left: none;
+  border-top: none;
 }
 
-.image-corners::after {
-  bottom: -14px;
-  right: -59px;
-}
+/* ============================
+   DIVIDER — INFO ICON
+=========================== */
 
-/* DIVIDER — LONG LINES + HOLLOW DIAMOND */
 .divider {
   display: flex;
   align-items: center;
@@ -97,21 +103,26 @@
   background: var(--border);
 }
 
-.divider .diamond {
-  width: 16px;
-  height: 16px;
-  border: 2px solid var(--gold);
-  background: transparent;
-  transform: rotate(45deg);
-  margin: 0 30px;
-  z-index: 11;
+.diamond-icon {
+  width: 18px;
+  height: 18px;
+  margin: 0 20px;
+  display: block;
+}
+
+.info-icon {
+  display: block;
+  margin: 0 20px;
 }
 
 .divider.dark .line {
   background: var(--border);
 }
 
-/* PRINCIPLES — BLACK BACKGROUND */
+/* ============================
+   PRINCIPLES SECTION
+=========================== */
+
 .principles {
   background: var(--black);
   padding: 80px 40px 90px;
@@ -119,14 +130,14 @@
 
 .principles .section-label {
   margin-bottom: 10px;
-  margin-left: 0px; /* already correct */
+  margin-left: 0px;
 }
 
 .principles h2 {
   font-size: 40px;
   font-weight: 300;
   margin: 0 0 50px;
-  margin-left: 0px; /* aligns with home page heading */
+  margin-left: 0px;
 }
 
 .principles-grid {
@@ -173,8 +184,10 @@
   border-bottom: none !important;
 }
 
+/* ============================
+   TEAM SECTION
+=========================== */
 
-/* TEAM SECTION WITH LEFT GOLD LINE */
 .team {
   position: relative;
   background: var(--black);
@@ -184,12 +197,11 @@
 .team::before {
   content: "";
   position: absolute;
-  left: 40px;        /* aligns with the text */
-  top: 175px;        /* sits right under "Our Team" */
-  width: 100px;       /* length of the gold line */
-  height: 2px;       /* thin horizontal line */
+  left: 40px;
+  top: 175px;
+  width: 100px;
+  height: 2px;
   background: var(--gold);
-  
 }
 
 .team .section-label {
@@ -200,10 +212,10 @@
 .team h2 {
   font-size: 40px;
   font-weight: 300;
-  margin-left: 0px; /* aligns with home page heading */
+  margin-left: 0px;
 }
 
-/* TEAM GRID WITH OVERLAY CARDS */
+/* TEAM GRID */
 .team-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -247,7 +259,6 @@
   font-size: 16px;
 }
 
-/* GOLD UNDERLINE UNDER NAME */
 .team-grid h3::after {
   content: "";
   position: absolute;
@@ -264,15 +275,15 @@
   color: var(--muted);
 }
 
-/* TEAM STATS — GRID STYLE LIKE FIGMA */
+/* TEAM STATS */
 .team-stats {
   background: var(--black);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
-  padding: 10px; /* reduced space */
-  margin-bottom: 0px; /* reduces gap before footer */
+  padding: 10px;
+  margin-bottom: 0px;
 }
 
 .team-stats div {
@@ -281,7 +292,6 @@
   border-right: 1px solid var(--border);
 }
 
-/* remove last column border */
 .team-stats div:last-child {
   border-right: none;
 }
@@ -299,48 +309,104 @@
   text-transform: uppercase;
 }
 
-/* RESPONSIVE */
-@media (max-width: 1024px) {
+/* ============================
+   RESPONSIVE — TABLET
+=========================== */
+
+@media (max-width: 900px) {
+
+  .about-page {
+    padding: 80px 20px;
+  }
+
   .philosophy {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .image-wrapper {
-    margin: 40px auto 0;
+    margin: 20px auto 0;
+    max-width: 500px;
+  }
+
+  .principles-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
   }
 
   .team-grid {
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
   }
 
   .team-stats {
-    gap: 60px;
+    gap: 40px;
   }
 }
 
-@media (max-width: 768px) {
+/* ============================
+   RESPONSIVE — MOBILE
+=========================== */
+
+@media (max-width: 600px) {
+
   .about-page {
-    padding: 60px 20px;
+    padding: 60px 16px;
   }
 
   .philosophy {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .philosophy h1 {
+    font-size: 32px;
+  }
+
+  .philosophy p {
+    font-size: 14px;
+  }
+
+  .image-wrapper {
+    max-width: 100%;
+    margin: 20px auto 0;
+  }
+
+  /* Mobile corner line scaling */
+  .image-wrapper::before,
+  .image-wrapper::after {
+    width: 22px;
+    height: 22px;
+    border-width: 1.5px;
+  }
+
+  .image-wrapper::before {
+    top: -6px;
+    left: -6px;
+  }
+
+  .image-wrapper::after {
+    bottom: -6px;
+    right: -6px;
   }
 
   .principles-grid {
     grid-template-columns: 1fr;
+    gap: 30px;
   }
 
   .team-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
   }
 
   .team-stats {
     flex-direction: column;
     gap: 20px;
+    text-align: center;
   }
 
   .team::before {
-    left: 20px;
+    left: 16px;
   }
 }
