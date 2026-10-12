@@ -90,15 +90,6 @@
   color: var(--black);
 }
 
-/* SCROLL */
-.scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  left: 80px; /* same as hero padding */
-  color: var(--muted);
-  letter-spacing: 2px;
-  font-size: 12px;
-}
 
 /* ============================
    STATS BAR
