@@ -72,17 +72,18 @@
       <div>
         <h2>Planning</h2>
         <p>
-          The project began with a client brief identifying Lumi Architecture Studio as the target brand.
-          Initial planning involved defining the site architecture — five core pages (Home, Projects, About,
-          Services, Contact) plus this Web Report — and establishing a content hierarchy for each.
-          A wireframe sketch was produced before any visual design decisions were made, ensuring layout logic
-          preceded aesthetic choices.
+          I started the project by breaking down what the Lumi Architecture Studio website actually needed: 
+          a clean multi‑page structure with Home, Projects, About, Services, Contact, and the Web Report itself. 
+          Before touching any visuals, I sketched a rough layout and page hierarchy so I knew how everything connected.
         </p>
         <p>
-          Colour palette selection was driven by the brand brief: a dark premium theme appropriate for a
-          high-end Nordic architecture practice. Gold accents were chosen to suggest precision and craft
-          without excessive warmth. Typography choices (Montserrat for headings, Inter for body) were validated
-          against readability requirements across all three target breakpoints.
+          Most of the early planning was just me figuring out how to keep the site simple, readable, 
+          and consistent across all pages. I used course material and W3Schools a lot during this phase to make sure 
+          I wasn’t missing any basic HTML/CSS structure rules.
+        <p>
+          For the visual direction, I chose a dark Scandinavian theme with gold accents because it fits the architecture brand.
+          Montserrat and Inter were picked for typography after checking readability on different screen sizes. 
+          I tested the fonts manually and adjusted sizes until they felt balanced.
         </p>
       </div>
     </article>
@@ -92,15 +93,24 @@
       <div>
         <h2>Specification</h2>
         <p>
-          The site is implemented as a multi-page static website using semantic HTML5, modular CSS, and a small
-          amount of vanilla JavaScript for interactivity (navigation behaviour, project filtering, and tabbed
-          report content). No frameworks are used, in order to align with course requirements and demonstrate
-          direct control over markup and styling.
+          The whole site is built as a static multi‑page website using semantic HTML5, modular CSS, 
+          and small amounts of vanilla JavaScript. I didn’t use any frameworks because the course expects us to 
+          show understanding of raw HTML/CSS/JS.
         </p>
         <p>
-          Each page has its own CSS file (home.css, projects.css, about.css, services.css, contact.css, report.css)
-          plus a shared style.css for global typography, colours, and layout primitives. Assets are organised into
-          /img for images and /js for scripts, following a clear, predictable structure.
+          Each page has its own CSS file (home.css, projects.css, about.css, services.css, contact.css, report.css) 
+          and there’s a shared style.css for global colours, typography, and layout rules.
+        </p>
+        <p>
+          I kept the folder structure simple:
+        </p>
+        <ul>
+          <li>/img for images</li>
+          <li>/js for scripts</li>
+          <li>/css for styles</li>
+        </ul>
+        <p>
+          I used GIMP to crop and resize images so they load faster and don’t break the layout.
         </p>
       </div>
     </article>
@@ -110,14 +120,14 @@
       <div>
         <h2>Layout Choices</h2>
         <p>
-          The primary layout system is CSS Grid at the page level, with Flexbox used for component-internal
-          alignment. Grid is used for project cards, services, team members, and report sections, while Flexbox
-          handles navigation, stats bars, and form alignment.
+          I used CSS Grid for the main page layouts (projects, services, team grid, report sections)
+          because it gives clean alignment and predictable spacing. Flexbox is used inside components like
+          navigation, stats bars, and form elements.
         </p>
         <p>
-          The hero section uses 100vh height with a stacked content column to ensure vertical centring regardless
-          of viewport height. Section padding and max-width constraints are used to keep text columns readable
-          and consistent across pages.
+          The hero sections use a tall layout with centered content so they look good on both large 
+          monitors and smaller laptops. I also added max‑width limits to text blocks to keep everything 
+          readable and prevent long lines stretching across the screen.
         </p>
       </div>
     </article>
@@ -127,16 +137,20 @@
       <div>
         <h2>Responsiveness</h2>
         <p>
-          Three breakpoints are defined:
+          I built the site around three breakpoints:
         </p>
         <ul>
-          <li>Mobile (~375px): Single-column layout throughout. Project grid becomes one column; stats bars stack.</li>
-          <li>Tablet (~768px): Two-column layouts activate for hero content + image pairs. Project grid becomes two columns.</li>
-          <li>Desktop (~1440px): Full three- and four-column grids. Navigation is a horizontal link row.</li>
+          <li>Mobile (~375px): everything becomes a single column, grids collapse, spacing tightens.</li>
+          <li>Tablet (~768px): two‑column layouts activate, images scale down, grids become 2‑columns.</li>
+          <li>Desktop (~1440px): full layout with 3–4 column grids and wide spacing.</li>
         </ul>
         <p>
-          Responsiveness is implemented using CSS media queries and grid reflow. No framework utilities are used;
-          all breakpoints are written directly in CSS to keep the implementation transparent.
+          All responsiveness is done with CSS media queries.
+          I didn’t use Bootstrap or Tailwind — I wrote everything manually so I 
+          could understand how each breakpoint behaves.
+        </p>
+        <p>
+          Copilot helped me a lot here by explaining certain CSS behaviours and helping me debug weird spacing issues.
         </p>
       </div>
     </article>
@@ -146,13 +160,13 @@
       <div>
         <h2>Media</h2>
         <p>
-          All photography is sourced from Unsplash and stored locally in the /img directory. Images are resized
-          to appropriate dimensions for their usage (hero, project cards, team portraits) to avoid unnecessary
-          file size and layout shift.
+          All images are from Unsplash and stored locally in /img. 
+          I resized them in GIMP to avoid huge file sizes and layout shifts.
         </p>
         <p>
-          Alt text is provided for all meaningful images to support screen reader accessibility. Decorative
-          elements (such as geometric frames) are implemented as styled divs without alt attributes.
+          I added alt text to meaningful images for accessibility. 
+          Decorative shapes (gold lines, corner frames, dividers) are done 
+          with CSS instead of images so they scale better.
         </p>
       </div>
     </article>
@@ -162,15 +176,20 @@
       <div>
         <h2>Scripts & Interactivity</h2>
         <p>
-          JavaScript is used sparingly to enhance the experience without overwhelming the project:
+          I kept JavaScript minimal but functional:
         </p>
         <ul>
-          <li>Project filter: category buttons show/hide project cards based on data-category attributes.</li>
-          <li>Report tabs: clicking a tab button swaps the visible content section.</li>
+          <li>Navigation behaviour (active link + underline animation)</li>
+          <li>Project filtering using data attributes</li>
+          <li>Tab switching inside the Web Report</li>
         </ul>
         <p>
-          All scripts are written in vanilla JavaScript and kept in the /js directory. No third-party libraries
-          are used.
+          Everything is written in vanilla JS.
+          Copilot helped me write cleaner functions and fix a few bugs.
+          Claude was used once or twice when I needed debugging help for layout issues.
+        </p>
+        <p>
+          No external libraries were used.
         </p>
       </div>
     </article>
@@ -180,12 +199,19 @@
       <div>
         <h2>Validation</h2>
         <p>
-          HTML structure follows semantic conventions: landmark elements (nav, main, section, footer), a single
-          H1 per page, and H2/H3 used for section and sub-section titles. Forms use labels paired with inputs.
+          I followed semantic HTML rules:
         </p>
+        <ul>
+          <li>One H1 per page</li>
+          <li>Sections grouped logically</li>
+          <li>Labels connected to form inputs</li>
+          <li>Navigation uses proper nav element</li>
+        </ul>
         <p>
-          Colour contrast was checked against WCAG 2.1 AA requirements for the dark theme. Body text, white text,
-          and gold accents all meet or exceed AA contrast ratios against the charcoal background.
+          I checked colour contrast manually and with online 
+          tools to make sure the dark theme still meets accessibility
+          standards. The gold, white, and muted grey colours all pass 
+          WCAG AA contrast requirements.
         </p>
       </div>
     </article>
@@ -195,14 +221,19 @@
       <div>
         <h2>Reflection</h2>
         <p>
-          The decision to build Lumi as a multi-page static site rather than a single-page app kept the project
-          aligned with course expectations and made the structure easier to understand. Navigation is simple and
-          predictable, and each page has a clear purpose.
+          Building Lumi as a multi‑page static site made everything easier to
+          understand and maintain. Each page has a clear purpose, 
+          and navigation feels simple and predictable.
         </p>
         <p>
-          If the project were extended, future enhancements could include scroll-triggered animations, a richer
-          project detail view with image galleries, and a more advanced map integration using a JavaScript
-          library such as Leaflet with OpenStreetMap tiles.
+          The biggest challenge was responsiveness — especially making the About page and
+          Web Report look good on mobile — but using Copilot, W3Schools,
+          and course material helped me solve those issues step by step.
+        </p>
+        <p>
+          If I continued the project, I’d add animations, a proper project detail 
+          page with galleries, and maybe a more advanced map integration using 
+          Leaflet or similar libraries.
         </p>
       </div>
     </article>
